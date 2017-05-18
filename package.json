@@ -1,9 +1,14 @@
 {
   "name": "ionic-3-x-app",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
-  "private": true,
+  "version": "1.0.0",
+  "description": "A todo-list application built on ionic 2.x and angular 2.x",
+  "author": "Maurizio Cescon <maurizio.cescon@gmail.com> (http://www.mauriziocescon.com)",
+  "homepage": "http://www.mauriziocescon.com",
+  "private": false,
+  "engines": {
+    "node": ">=6.10.3",
+    "npm": ">=3.10.10"
+  },
   "scripts": {
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
@@ -20,6 +25,7 @@
     "@angular/http": "4.1.0",
     "@angular/platform-browser": "4.1.0",
     "@angular/platform-browser-dynamic": "4.1.0",
+    "@angular/platform-server": "4.1.0",
     "@ionic-native/core": "3.7.0",
     "@ionic-native/splash-screen": "3.7.0",
     "@ionic-native/status-bar": "3.7.0",
@@ -35,6 +41,5 @@
     "@ionic/cli-plugin-cordova": "1.1.0",
     "@ionic/cli-plugin-ionic-angular": "1.0.0",
     "typescript": "2.2.1"
-  },
-  "description": "An Ionic project"
+  }
 }
