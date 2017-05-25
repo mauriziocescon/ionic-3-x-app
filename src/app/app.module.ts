@@ -6,6 +6,9 @@ import { IonicApp, IonicModule, IonicErrorHandler } from "ionic-angular";
 import { Storage } from "@ionic/storage";
 import { TranslateModule, TranslateStaticLoader, TranslateLoader } from "ng2-translate";
 
+import { StatusBar } from "@ionic-native/status-bar";
+import { SplashScreen } from "@ionic-native/splash-screen";
+
 import { CoreModule } from "./core/core.module";
 import { SharedModule } from "./shared/shared.module";
 import { TabsModule } from "./tabs/tabs.module";
@@ -46,6 +49,8 @@ export function provideStorage() {
     AppComponent
   ],
   providers: [
+    SplashScreen,
+    StatusBar,
     {
       provide: ErrorHandler,
       useClass: IonicErrorHandler
