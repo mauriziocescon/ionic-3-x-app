@@ -31,7 +31,7 @@ export class SectionsComponent implements OnInit {
   }
 
   public ngOnInit(): void {
-
+    this.sections = [];
   }
 
   public ionViewWillEnter(): void {
