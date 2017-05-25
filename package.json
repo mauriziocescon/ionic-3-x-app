@@ -58,6 +58,6 @@
     "karma-safari-launcher": "1.0.0",
     "karma-spec-reporter": "0.0.31",
     "karma-typescript": "3.0.2",
-    "typescript": "2.2.1"
+    "typescript": "2.3.3"
   }
 }
