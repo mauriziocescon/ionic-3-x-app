@@ -15,7 +15,10 @@ module.exports = function (config) {
 
     karmaTypescriptConfig: {
       compilerOptions: {
-        lib: ["dom", "es2015"]
+        lib: ["dom", "es2015"],
+        transforms: [
+          require("karma-typescript-es6-transform")()
+        ]
       }
     },
 
