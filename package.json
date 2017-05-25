@@ -14,7 +14,8 @@
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
     "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve --lab"
+    "ionic:serve": "ionic-app-scripts serve --lab",
+    "test": "karma start karma.conf.js"
   },
   "config": {
     "ionic_app_entry_point": "src/main.ts"
