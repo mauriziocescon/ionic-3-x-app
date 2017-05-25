@@ -5,7 +5,7 @@ import { ActionsService } from "./actions.service";
 import { AppConstantsService } from "./app-constants.service";
 import { AuthService } from "./ws/auth.service";
 import { HelperService } from "./helper.service";
-import { HowAboutSalesService } from "./ws/how-about-sales.service";
+import { ApisService } from "./ws/apis.service";
 import { TodoDataService } from "./db/todo.data-service";
 import { Task } from "./db/tasks.model";
 import { Section } from "./db/sections.model";
@@ -35,7 +35,7 @@ export class CoreModule {
         AppConstantsService,
         AuthService,
         HelperService,
-        HowAboutSalesService,
+        ApisService,
         TodoDataService,
         UtilsService
       ]
@@ -48,7 +48,7 @@ export {
   AppConstantsService,
   AuthService,
   HelperService,
-  HowAboutSalesService,
+  ApisService,
   TodoDataService,
   Task,
   Section,

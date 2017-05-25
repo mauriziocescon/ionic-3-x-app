@@ -2,10 +2,10 @@ import { Injectable } from "@angular/core";
 
 @Injectable()
 export class AppConstantsService {
-  WS_URL = "https://adrian.howaboutsales.com/api/";
+  WS_URL = "";
 
   ACTIONS_LENGHT = 5;
-  TODO_DB_KEY = "howaboutsales";
+  TODO_DB_KEY = "todobd";
 
   SECTION_TYPES = ["0", "1", "2", "3", "4", "5"];
 
@@ -13,7 +13,7 @@ export class AppConstantsService {
   SUPPORTED_LANG_DESC = ["English"];
 
   LANGUAGE_ID = "LANGUAGE_ID";
-  TOKEN_ID = "HOW_ABOUT_SALES_TOKEN_ID";
+  TOKEN_ID = "TODO_TOKEN_ID";
 
   constructor() {
   }

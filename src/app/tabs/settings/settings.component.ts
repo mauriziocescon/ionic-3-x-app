@@ -3,7 +3,7 @@ import { Component } from "@angular/core";
 import { NavController, ModalController, LoadingController, AlertController } from "ionic-angular";
 import { TranslateService } from "ng2-translate";
 
-import { HowAboutSalesService, TodoDataService, HelperService } from "../../core/core.module";
+import { ApisService, TodoDataService, HelperService } from "../../core/core.module";
 import { LoginComponent } from "../../shared/login/login.component";
 
 @Component({
@@ -16,19 +16,26 @@ export class SettingsComponent {
   private loadingCtrl: LoadingController;
   private alertCtrl: AlertController;
   private translate: TranslateService;
-  private howAboutSales: HowAboutSalesService;
+  private apis: ApisService;
   private todoDataService: TodoDataService;
   private helper: HelperService;
 
   public loginSuccess: boolean;
 
-  constructor(navCtrl: NavController, modalCtrl: ModalController, loadingCtrl: LoadingController, alertCtrl: AlertController, howAboutSalesService: HowAboutSalesService, todoDataService: TodoDataService, helperService: HelperService, translate: TranslateService) {
+  constructor(navCtrl: NavController,
+              modalCtrl: ModalController,
+              loadingCtrl: LoadingController,
+              alertCtrl: AlertController,
+              apisService: ApisService,
+              todoDataService: TodoDataService,
+              helperService: HelperService,
+              translate: TranslateService) {
     this.navCtrl = navCtrl;
     this.modalCtrl = modalCtrl;
     this.loadingCtrl = loadingCtrl;
     this.alertCtrl = alertCtrl;
     this.translate = translate;
-    this.howAboutSales = howAboutSalesService;
+    this.apis = apisService;
     this.todoDataService = todoDataService;
     this.helper = helperService;
   }
@@ -57,9 +64,9 @@ export class SettingsComponent {
         });
         loading.present();
 
-        this.howAboutSales.getTasks().then((tasks) => {
+        this.apis.getTasks().then((tasks) => {
           console.log(JSON.stringify(tasks, null, 2));
-          this.todoDataService.mergeSectionsTasksDb(this.helper.mapHowAboutSalesGetTodosToDbEntries(tasks));
+          this.todoDataService.mergeSectionsTasksDb(this.helper.mapApiGetTodosToDbEntries(tasks));
           loading.dismiss();
 
           let alert = this.alertCtrl.create({
@@ -82,7 +89,7 @@ export class SettingsComponent {
         });
         loading.present();
 
-        this.howAboutSales.getPredefinedActivity().then((activities) => {
+        this.apis.getPredefinedActivity().then((activities) => {
           console.log(JSON.stringify(activities, null, 2));
           loading.dismiss();
 

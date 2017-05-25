@@ -4,7 +4,7 @@ import { NavController } from "ionic-angular";
 import { ActionsService } from "../../core/core.module";
 
 @Component({
-  selector: "how-about-sales",
+  selector: "actions-history",
   templateUrl: "actions-history.component.html"
 })
 export class ActionsHistoryComponent implements OnInit {

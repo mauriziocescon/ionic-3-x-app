@@ -7,7 +7,7 @@ import { AppConstantsService } from "../app-constants.service";
 import { AuthService } from "./auth.service";
 
 @Injectable()
-export class HowAboutSalesService {
+export class ApisService {
   private http: Http;
   private auth: AuthService;
   private appConstants: AppConstantsService;

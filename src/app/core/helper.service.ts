@@ -14,8 +14,8 @@ export class HelperService {
     this.utils = utils;
   }
 
-  // has = how about sales
-  public mapHowAboutSalesGetTodosToDbEntries(hasTasks: Array<any>): any {
+  // has = prefix
+  public mapApiGetTodosToDbEntries(hasTasks: Array<any>): any {
 
     let secsDb: Array<SectionDb> = [];
 
