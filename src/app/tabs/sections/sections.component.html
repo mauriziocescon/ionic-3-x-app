@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{ 'SECTIONS' | translate }}
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addSection()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list [virtualScroll]="sections">
+    <ion-item-sliding *virtualItem="let section">
+      <button ion-item (click)="goToSection(section)">
+        <ion-avatar item-left>
+          <ion-icon class="section-icon" name="{{ getSectionIcon(section) }}"></ion-icon>
+        </ion-avatar>
+        <h2>{{ section.description }}</h2>
+        <h3>{{ 'CREATION_DATE' | translate }} {{ section.creationDate | date:'medium' }}</h3>
+        <p>{{ getSectionTypeDesc(section) | translate }}</p>
+      </button>
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="delete(section)">{{ 'DELETE' | translate }}</button>
+        <button ion-button (click)="modify(section)">{{ 'MODIFY' | translate }}</button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

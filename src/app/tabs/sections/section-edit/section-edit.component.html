@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{ 'SECTION' | translate }}
+    </ion-title>
+    <ion-buttons>
+      <button ion-button icon-only (click)="dismiss()">
+        {{ 'CLOSE' | translate }}
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-input type="text" placeholder="{{ 'TITLE' | translate }}" [(ngModel)]="section.description" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>{{ 'TYPE' | translate }}</ion-label>
+    <ion-select [(ngModel)]="section.type">
+      <ion-option *ngFor="let value of types" value="{{ value }}">
+        {{ getSectionTypeDesc(value) | translate }}
+      </ion-option>
+    </ion-select>
+  </ion-item>
+  <button ion-button bottom block (click)="save()">{{ 'SAVE' | translate }}</button>
+</ion-content>

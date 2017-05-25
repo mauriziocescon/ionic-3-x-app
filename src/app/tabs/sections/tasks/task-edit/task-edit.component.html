@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{ 'TASK' | translate }}
+    </ion-title>
+    <ion-buttons>
+      <button ion-button icon-only (click)="dismiss()">
+        {{ 'CLOSE' | translate }}
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="task.description" required></ion-input>
+  </ion-item>
+  <button ion-button bottom block (click)="save()">{{ 'SAVE' | translate }}</button>
+</ion-content>

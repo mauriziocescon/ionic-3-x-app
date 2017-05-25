@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{ 'SETTINGS' | translate }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <button ion-button full (click)="login()">{{ 'LOGIN' | translate }}</button>
+  <button ion-button full [hidden]="!loginSuccess" (click)="getTodos()">getTodos</button>
+  <button ion-button full [hidden]="!loginSuccess" (click)="getPredefinedActivity()">getPredefinedActivity</button>
+</ion-content>

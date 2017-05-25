@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{ section.description }}
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addTask()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list [virtualScroll]="tasks">
+    <ion-item-sliding *virtualItem="let task">
+      <button ion-item detail-none (click)="changeStatus(task)">
+        <ion-avatar item-right>
+          <img [hidden]="!task.done" src="assets/img/done.svg">
+          <img [hidden]="task.done" src="assets/img/todo.svg">
+        </ion-avatar>
+        <h2>{{ task.description }}</h2>
+        <h3>{{ 'CREATION_DATE' | translate }} {{ task.creationDate | date:'medium' }}</h3>
+      </button>
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="delete(task)">{{ 'DELETE' | translate }}</button>
+        <button ion-button (click)="modify(task)">{{ 'MODIFY' | translate }}</button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
