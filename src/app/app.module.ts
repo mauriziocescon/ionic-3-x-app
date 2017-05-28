@@ -42,7 +42,6 @@ export function provideStorage() {
   ],
   exports: [
     AppComponent,
-    CoreModule,
     SharedModule
   ],
   bootstrap: [IonicApp],
