@@ -14,9 +14,6 @@ import { SettingsComponent } from "./settings.component";
   declarations: [
     SettingsComponent
   ],
-  entryComponents: [
-    SettingsComponent
-  ],
   providers: []
 })
 export class SettingsModule {

@@ -19,9 +19,6 @@ import { SectionEditComponent } from "./section-edit/section-edit.component";
     SectionsComponent,
     SectionEditComponent
   ],
-  entryComponents: [
-    SectionEditComponent
-  ],
   providers: []
 })
 export class SectionsModule {
