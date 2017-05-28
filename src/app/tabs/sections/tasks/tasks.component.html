@@ -16,8 +16,8 @@
     <ion-item-sliding *virtualItem="let task">
       <button ion-item detail-none (click)="changeStatus(task)">
         <ion-avatar item-right>
-          <img [hidden]="!task.done" src="assets/img/done.svg">
-          <img [hidden]="task.done" src="assets/img/todo.svg">
+          <img [hidden]="!task.done" src="assets/imgs/done.svg">
+          <img [hidden]="task.done" src="assets/imgs/todo.svg">
         </ion-avatar>
         <h2>{{ task.description }}</h2>
         <h3>{{ 'CREATION_DATE' | translate }} {{ task.creationDate | date:'medium' }}</h3>
