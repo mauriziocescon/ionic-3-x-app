@@ -12,7 +12,9 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "target": "es5",
-    "types": ["jasmine"]
+    "types": [
+      "jasmine"
+    ]
   },
   "include": [
     "src/**/*.ts"
