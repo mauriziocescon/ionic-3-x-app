@@ -1,5 +1,7 @@
-Todo-list built on ionic 3.x, angular, ES2017 (beta)
+Todo-list built on ionic 3.x, angular, ES2017 
 =========
+
+Application currently in beta
 
 ## How to build the app
 
