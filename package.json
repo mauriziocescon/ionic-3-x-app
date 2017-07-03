@@ -16,8 +16,7 @@
     "serve-lab": "ionic-app-scripts serve --lab",
     "serve-ios": "ionic-app-scripts serve --platform ios",
     "serve-and": "ionic-app-scripts serve --platform android",
-    "serve-bro": "ionic-app-scripts serve --platform browser",
-    "test": "npm run build"
+    "serve-bro": "ionic-app-scripts serve --platform browser"
   },
   "config": {
     "ionic_app_entry_point": "src/main.ts"
