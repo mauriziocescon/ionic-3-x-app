@@ -5,6 +5,8 @@ import { FormsModule } from "@angular/forms";
 import { TranslateModule } from "ng2-translate";
 
 import { LoginModule, LoginComponent } from "./login/login.module";
+import { Enum } from "./utilities/enum";
+import { KeyValue } from "./utilities/keyvalue";
 
 @NgModule({
   imports: [
@@ -23,4 +25,8 @@ import { LoginModule, LoginComponent } from "./login/login.module";
 export class SharedModule {
 }
 
-export { LoginComponent };
+export {
+  LoginComponent,
+  Enum,
+  KeyValue
+};
