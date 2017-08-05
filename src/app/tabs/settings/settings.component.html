@@ -7,12 +7,12 @@
 </ion-header>
 
 <ion-content>
-  <button ion-button full (click)="login()">{{ "LOGIN" | translate }}</button>
-
-  <ion-select [(ngModel)]="selectedLanguageId">
-    <ion-option *ngFor="let language of languages" value="{{ language }}">
-      {{ language }}
-    </ion-option>
-  </ion-select>
-
+  <ion-item>
+    <ion-label>{{ "LANGUAGE" | translate }}</ion-label>
+    <ion-select [(ngModel)]="selectedLanguageId" okText="Okay" cancelText="Dismiss" (ionChange)="selectLanguage()">
+      <ion-option *ngFor="let language of languages" [value]="language">
+        {{ language }}
+      </ion-option>
+    </ion-select>
+  </ion-item>
 </ion-content>
