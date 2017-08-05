@@ -16,7 +16,7 @@ export class ActionsService {
 
   public addAction(desc: string): void {
     this.history.unshift(desc);
-    if (this.history.length > this.appConstants.ACTIONS_LENGHT) {
+    if (this.history.length > this.appConstants.Application.ACTIONS_LENGHT) {
       this.history.pop();
     }
   }

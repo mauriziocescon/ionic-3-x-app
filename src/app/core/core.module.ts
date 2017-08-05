@@ -4,10 +4,7 @@ import { CommonModule } from "@angular/common";
 import { ActionsService } from "./actions.service";
 import { AppConstantsService } from "./app-constants.service";
 import { AppLanguageService } from "./app-language.service";
-import { AuthService } from "./ws/auth.service";
-import { HelperService } from "./helper.service";
 import { LocalStorageService } from "./local-storage.service";
-import { ApisService } from "./ws/apis.service";
 import { TodoDataService } from "./db/todo.data-service";
 import { Task } from "./db/tasks.model";
 import { Section } from "./db/sections.model";
@@ -40,10 +37,7 @@ export class CoreModule {
         ActionsService,
         AppConstantsService,
         AppLanguageService,
-        AuthService,
-        HelperService,
         LocalStorageService,
-        ApisService,
         TodoDataService,
         UtilsService,
         {
@@ -60,10 +54,7 @@ export {
   ActionsService,
   AppConstantsService,
   AppLanguageService,
-  AuthService,
-  HelperService,
   LocalStorageService,
-  ApisService,
   TodoDataService,
   Task,
   Section,

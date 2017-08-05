@@ -3,7 +3,6 @@ import { Component } from "@angular/core";
 import { NavController, ModalController, LoadingController, AlertController } from "ionic-angular";
 import { TranslateService } from "ng2-translate";
 
-import { ApisService, TodoDataService, HelperService } from "../../core/core.module";
 import { LoginComponent } from "../../shared/login/login.component";
 
 @Component({
@@ -16,9 +15,6 @@ export class SettingsComponent {
   private loadingCtrl: LoadingController;
   private alertCtrl: AlertController;
   private translate: TranslateService;
-  private apis: ApisService;
-  private todoDataService: TodoDataService;
-  private helper: HelperService;
 
   public loginSuccess: boolean;
 
@@ -26,18 +22,12 @@ export class SettingsComponent {
               modalCtrl: ModalController,
               loadingCtrl: LoadingController,
               alertCtrl: AlertController,
-              apisService: ApisService,
-              todoDataService: TodoDataService,
-              helperService: HelperService,
               translate: TranslateService) {
     this.navCtrl = navCtrl;
     this.modalCtrl = modalCtrl;
     this.loadingCtrl = loadingCtrl;
     this.alertCtrl = alertCtrl;
     this.translate = translate;
-    this.apis = apisService;
-    this.todoDataService = todoDataService;
-    this.helper = helperService;
   }
 
   public login(): void {
@@ -52,54 +42,5 @@ export class SettingsComponent {
     });
 
     loginModal.present();
-  }
-
-  public getTodos(): void {
-
-    this.translate.get("LOADING")
-      .subscribe((res: string) => {
-
-        let loading = this.loadingCtrl.create({
-          content: res
-        });
-        loading.present();
-
-        this.apis.getTasks().then((tasks) => {
-          console.log(JSON.stringify(tasks, null, 2));
-          this.todoDataService.mergeSectionsTasksDb(this.helper.mapApiGetTodosToDbEntries(tasks));
-          loading.dismiss();
-
-          let alert = this.alertCtrl.create({
-            title: "TODOS_SUCCESS",
-            subTitle: "CHECK_TODOS",
-            buttons: ["Dismiss"]
-          });
-          alert.present();
-        });
-      });
-  }
-
-  public getPredefinedActivity(): void {
-
-    this.translate.get("LOADING")
-      .subscribe((res: string) => {
-
-        let loading = this.loadingCtrl.create({
-          content: res
-        });
-        loading.present();
-
-        this.apis.getPredefinedActivity().then((activities) => {
-          console.log(JSON.stringify(activities, null, 2));
-          loading.dismiss();
-
-          let alert = this.alertCtrl.create({
-            title: "PREDEFINED_SUCCESS",
-            subTitle: "Data downloaded, but not managed",
-            buttons: ["Dismiss"]
-          });
-          alert.present();
-        });
-      });
   }
 }

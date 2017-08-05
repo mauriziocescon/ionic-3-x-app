@@ -38,10 +38,10 @@ export class TodoDataService {
     return new Promise((resolve, reject) => {
       this.storage.ready()
         .then(() => {
-          this.storage.get(this.appConstants.TODO_DB_KEY)
+          this.storage.get(this.appConstants.Application.TODO_DB_KEY)
             .then((data) => {
-              if (data == null) {
-                this.storage.set(this.appConstants.TODO_DB_KEY, []).then(() => {
+              if (data === null) {
+                this.storage.set(this.appConstants.Application.TODO_DB_KEY, []).then(() => {
                   resolve();
                 });
               }
@@ -54,7 +54,7 @@ export class TodoDataService {
         })
         .catch(() => {
           // initialize
-          this.storage.set(this.appConstants.TODO_DB_KEY, []).then(() => {
+          this.storage.set(this.appConstants.Application.TODO_DB_KEY, []).then(() => {
             resolve();
           });
         })
@@ -70,7 +70,7 @@ export class TodoDataService {
    * @returns {boolean}
    */
   private areSectionsEqual(sectionDb: SectionDb, section: Section): boolean {
-    return sectionDb.id == section.id;
+    return sectionDb.id === section.id;
   }
 
   /**
@@ -96,7 +96,7 @@ export class TodoDataService {
    * @returns {boolean}
    */
   private areTasksEqual(taskDb: TaskDb, task: Task): boolean {
-    return taskDb.id == task.id;
+    return taskDb.id === task.id;
   }
 
   /**
@@ -125,7 +125,7 @@ export class TodoDataService {
     return new Promise((resolve, reject) => {
       this.storage.ready()
         .then(() => {
-          this.storage.get(this.appConstants.TODO_DB_KEY)
+          this.storage.get(this.appConstants.Application.TODO_DB_KEY)
             .then((secsDb: Array<SectionDb>) => {
               let sIndex = secsDb.findIndex((secDb: SectionDb) => {
                 return this.areSectionsEqual(secDb, section);
@@ -142,7 +142,7 @@ export class TodoDataService {
                 secsDb = secsDb.concat(secDb);
               }
 
-              this.storage.set(this.appConstants.TODO_DB_KEY, secsDb)
+              this.storage.set(this.appConstants.Application.TODO_DB_KEY, secsDb)
                 .then(() => {
                   resolve();
                 });
@@ -163,19 +163,19 @@ export class TodoDataService {
     return new Promise((resolve, reject) => {
       this.storage.ready()
         .then(() => {
-          this.storage.get(this.appConstants.TODO_DB_KEY)
+          this.storage.get(this.appConstants.Application.TODO_DB_KEY)
             .then((secsDb: Array<SectionDb>) => {
 
               let sIndex = secsDb.findIndex((secDb: SectionDb) => {
                 return this.areSectionsEqual(secDb, section);
               });
 
-              if (sIndex == -1) {
+              if (sIndex === -1) {
                 resolve();
               }
               else {
                 secsDb.splice(sIndex, 1);
-                this.storage.set(this.appConstants.TODO_DB_KEY, secsDb)
+                this.storage.set(this.appConstants.Application.TODO_DB_KEY, secsDb)
                   .then(() => {
                     resolve();
                   });
@@ -195,7 +195,7 @@ export class TodoDataService {
     return new Promise((resolve, reject) => {
       this.storage.ready()
         .then(() => {
-          this.storage.get(this.appConstants.TODO_DB_KEY)
+          this.storage.get(this.appConstants.Application.TODO_DB_KEY)
             .then((secsDb: Array<SectionDb>) => {
               if (secsDb) {
                 let secs = secsDb.map((secDb: SectionDb) => {
@@ -226,7 +226,7 @@ export class TodoDataService {
     return new Promise((resolve, reject) => {
       this.storage.ready()
         .then(() => {
-          this.storage.get(this.appConstants.TODO_DB_KEY)
+          this.storage.get(this.appConstants.Application.TODO_DB_KEY)
             .then((secsDb: Array<SectionDb>) => {
               let sIndex = secsDb.findIndex((secDb: SectionDb) => {
                 return this.areSectionsEqual(secDb, section);
@@ -241,7 +241,7 @@ export class TodoDataService {
 
               let taskDb = tIndex != -1 ? secDb.tasks[tIndex] : new TaskDb(task.id);
               this.updateTask(taskDb, task);
-              if (tIndex == -1) {
+              if (tIndex === -1) {
                 secDb.tasks.push(taskDb);
               }
 
@@ -253,7 +253,7 @@ export class TodoDataService {
                 secsDb = secsDb.concat(secDb);
               }
 
-              this.storage.set(this.appConstants.TODO_DB_KEY, secsDb)
+              this.storage.set(this.appConstants.Application.TODO_DB_KEY, secsDb)
                 .then(() => {
                   resolve();
                 });
@@ -276,13 +276,13 @@ export class TodoDataService {
     return new Promise((resolve, reject) => {
       this.storage.ready()
         .then(() => {
-          this.storage.get(this.appConstants.TODO_DB_KEY)
+          this.storage.get(this.appConstants.Application.TODO_DB_KEY)
             .then((secsDb: Array<SectionDb>) => {
               let sIndex = secsDb.findIndex((secDb: SectionDb) => {
                 return this.areSectionsEqual(secDb, section);
               });
 
-              if (sIndex == -1) {
+              if (sIndex === -1) {
                 resolve();
               }
               else {
@@ -291,12 +291,12 @@ export class TodoDataService {
                   return this.areTasksEqual(taskDb, task);
                 });
 
-                if (tIndex == -1) {
+                if (tIndex === -1) {
                   resolve();
                 }
                 else {
                   secDb.tasks.splice(tIndex, 1);
-                  this.storage.set(this.appConstants.TODO_DB_KEY, secsDb)
+                  this.storage.set(this.appConstants.Application.TODO_DB_KEY, secsDb)
                     .then(() => {
                       resolve();
                     });
@@ -317,13 +317,13 @@ export class TodoDataService {
     return new Promise((resolve, reject) => {
       this.storage.ready()
         .then(() => {
-          this.storage.get(this.appConstants.TODO_DB_KEY)
+          this.storage.get(this.appConstants.Application.TODO_DB_KEY)
             .then((secsDb: Array<SectionDb>) => {
               let sIndex = secsDb.findIndex((secDb: SectionDb) => {
                 return this.areSectionsEqual(secDb, section);
               });
 
-              if (sIndex == -1) {
+              if (sIndex === -1) {
                 resolve([]);
               }
               else {
@@ -344,7 +344,7 @@ export class TodoDataService {
     return new Promise((resolve, reject) => {
       this.storage.ready()
         .then(() => {
-          this.storage.get(this.appConstants.TODO_DB_KEY)
+          this.storage.get(this.appConstants.Application.TODO_DB_KEY)
             .then((secsDb: Array<SectionDb>) => {
 
               let secsDbIds = secsDb.map((secDb) => {
@@ -354,7 +354,7 @@ export class TodoDataService {
               for (let newSecDb of newSecsDb) {
                 let newSecDbIndex = secsDbIds.indexOf(newSecDb.id);
 
-                if (newSecDbIndex == -1) {
+                if (newSecDbIndex === -1) {
                   secsDb.push(newSecDb);
                 }
                 else {
@@ -372,7 +372,7 @@ export class TodoDataService {
                   for (let newTaskDb of newSecDb.tasks) {
                     let newTaskDbIndex = tasksDbIds.indexOf(newTaskDb.id);
 
-                    if (newTaskDbIndex == -1) {
+                    if (newTaskDbIndex === -1) {
                       secDb.tasks.push(newTaskDb);
                     }
                     else {
@@ -387,7 +387,7 @@ export class TodoDataService {
                 }
               }
 
-              this.storage.set(this.appConstants.TODO_DB_KEY, secsDb)
+              this.storage.set(this.appConstants.Application.TODO_DB_KEY, secsDb)
                 .then(() => {
                   resolve();
                 });

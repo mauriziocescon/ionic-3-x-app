@@ -5,7 +5,7 @@ import { ViewController, AlertController } from "ionic-angular";
 import "rxjs/Rx";
 import * as Rx from "rxjs";
 
-import { AuthService } from "../../core/core.module";
+import { AppConstantsService } from "../../core/core.module";
 
 @Component({
   selector: "login",
@@ -14,17 +14,17 @@ import { AuthService } from "../../core/core.module";
 export class LoginComponent implements OnInit {
   private viewCtrl: ViewController;
   private alertCtrl: AlertController;
-  private auth: AuthService;
+  private appConstants: AppConstantsService;
 
   public username: string;
   public password: string;
 
   private loading: boolean;
 
-  constructor(viewCtrl: ViewController, alertCtrl: AlertController/*, authService: AuthService*/) {
+  constructor(viewCtrl: ViewController, alertCtrl: AlertController/*, appConstantsService: AppConstantsService*/) {
     this.viewCtrl = viewCtrl;
     this.alertCtrl = alertCtrl;
-    // this.auth = authService;
+    // this.appConstants = appConstantsService;
   }
 
   get canLogin(): boolean {

@@ -31,7 +31,7 @@ export class SectionEditComponent implements OnInit {
 
   public ngOnInit(): void {
     this.section = this.navParams.get("section");
-    this.types = this.appConstants.SECTION_TYPES;
+    this.types = this.appConstants.Application.SECTION_TYPES;
   }
 
   public getSectionTypeDesc(type: string): any {
@@ -41,7 +41,7 @@ export class SectionEditComponent implements OnInit {
   public save(): void {
     this.translate.get(this.utils.getTranslateKeyForSectionType(this.section.type))
       .subscribe((res: string) => {
-        if (this.section.description.length == 0) {
+        if (this.section.description.length === 0) {
           this.section.description = res;
         }
         this.viewCtrl.dismiss(this.section);
