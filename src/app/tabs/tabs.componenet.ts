@@ -13,7 +13,6 @@ export class TabsComponent implements OnInit {
   private tab3Root: any;
 
   constructor() {
-
   }
 
   ngOnInit(): void {

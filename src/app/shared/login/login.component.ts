@@ -18,7 +18,9 @@ export class LoginComponent implements OnInit {
 
   private loading: boolean;
 
-  constructor(viewCtrl: ViewController, alertCtrl: AlertController/*, appConstantsService: AppConstantsService*/) {
+  constructor(viewCtrl: ViewController,
+              alertCtrl: AlertController//,
+              /*appConstantsService: AppConstantsService*/) {
     this.viewCtrl = viewCtrl;
     this.alertCtrl = alertCtrl;
     // this.appConstants = appConstantsService;

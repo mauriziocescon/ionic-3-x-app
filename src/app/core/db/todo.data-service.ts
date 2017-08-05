@@ -22,7 +22,8 @@ export class TodoDataService {
   private storage: Storage;
   private appConstants: AppConstantsService;
 
-  constructor(storage: Storage, appConstantsService: AppConstantsService) {
+  constructor(storage: Storage,
+              appConstantsService: AppConstantsService) {
     this.storage = storage;
     this.appConstants = appConstantsService;
 

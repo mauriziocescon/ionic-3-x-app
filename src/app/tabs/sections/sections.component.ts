@@ -21,12 +21,17 @@ export class SectionsComponent implements OnInit {
 
   public sections: Section[];
 
-  constructor(navCtrl: NavController, modalCtrl: ModalController, todoDataService: TodoDataService, utils: UtilsService, actionsService: ActionsService, translate: TranslateService) {
+  constructor(navCtrl: NavController,
+              modalCtrl: ModalController,
+              todoDataService: TodoDataService,
+              utils: UtilsService,
+              actions: ActionsService,
+              translate: TranslateService) {
     this.navCtrl = navCtrl;
     this.modalCtrl = modalCtrl;
     this.todoDataService = todoDataService;
     this.utils = utils;
-    this.actions = actionsService;
+    this.actions = actions;
     this.translate = translate;
   }
 

@@ -21,12 +21,16 @@ export class SectionEditComponent implements OnInit {
   public types: any[];
   private section: Section;
 
-  constructor(viewCtrl: ViewController, navParams: NavParams, translate: TranslateService, appConstantsService: AppConstantsService, utilsService: UtilsService) {
+  constructor(viewCtrl: ViewController,
+              navParams: NavParams,
+              translate: TranslateService,
+              appConstants: AppConstantsService,
+              utils: UtilsService) {
     this.viewCtrl = viewCtrl;
     this.navParams = navParams;
     this.translate = translate;
-    this.appConstants = appConstantsService;
-    this.utils = utilsService;
+    this.appConstants = appConstants;
+    this.utils = utils;
   }
 
   public ngOnInit(): void {

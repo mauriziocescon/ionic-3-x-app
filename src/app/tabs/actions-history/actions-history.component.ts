@@ -13,9 +13,10 @@ export class ActionsHistoryComponent implements OnInit {
 
   private history: string[];
 
-  constructor(navCtrl: NavController, actionsService: ActionsService) {
+  constructor(navCtrl: NavController,
+              actions: ActionsService) {
     this.navCtrl = navCtrl;
-    this.actions = actionsService;
+    this.actions = actions;
   }
 
   public ngOnInit(): void {
