@@ -11,7 +11,7 @@ export class ActionsHistoryComponent implements OnInit {
   private navCtrl: NavController;
   private actions: ActionsService;
 
-  private history: Array<string>;
+  private history: string[];
 
   constructor(navCtrl: NavController, actionsService: ActionsService) {
     this.navCtrl = navCtrl;

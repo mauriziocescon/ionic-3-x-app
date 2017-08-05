@@ -8,4 +8,11 @@
 
 <ion-content>
   <button ion-button full (click)="login()">{{ "LOGIN" | translate }}</button>
+
+  <ion-select [(ngModel)]="selectedLanguageId">
+    <ion-option *ngFor="let language of languages" value="{{ language }}">
+      {{ language }}
+    </ion-option>
+  </ion-select>
+
 </ion-content>

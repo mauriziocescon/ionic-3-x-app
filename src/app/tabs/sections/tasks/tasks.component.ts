@@ -21,7 +21,7 @@ export class TasksComponent implements OnInit {
   private translate: TranslateService;
 
   private section: Section;
-  public tasks: Array<Task>;
+  public tasks: Task[];
 
   constructor(navCtrl: NavController, navParams: NavParams, modalCtrl: ModalController, todoDataService: TodoDataService, utils: UtilsService, actionsService: ActionsService, translate: TranslateService) {
     this.navCtrl = navCtrl;
@@ -41,7 +41,7 @@ export class TasksComponent implements OnInit {
 
   public ionViewWillEnter(): void {
     this.todoDataService.getTasksForSections(this.section)
-      .then((tasks: Array<Task>) => {
+      .then((tasks: Task[]) => {
         this.tasks = tasks;
       });
   }

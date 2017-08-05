@@ -126,7 +126,7 @@ export class TodoDataService {
       this.storage.ready()
         .then(() => {
           this.storage.get(this.appConstants.Application.TODO_DB_KEY)
-            .then((secsDb: Array<SectionDb>) => {
+            .then((secsDb: SectionDb[]) => {
               let sIndex = secsDb.findIndex((secDb: SectionDb) => {
                 return this.areSectionsEqual(secDb, section);
               });
@@ -164,7 +164,7 @@ export class TodoDataService {
       this.storage.ready()
         .then(() => {
           this.storage.get(this.appConstants.Application.TODO_DB_KEY)
-            .then((secsDb: Array<SectionDb>) => {
+            .then((secsDb: SectionDb[]) => {
 
               let sIndex = secsDb.findIndex((secDb: SectionDb) => {
                 return this.areSectionsEqual(secDb, section);
@@ -191,12 +191,12 @@ export class TodoDataService {
    *
    * @returns {Promise<T>}
    */
-  public getSections(): Promise<Array<Section>> {
+  public getSections(): Promise<Section[]> {
     return new Promise((resolve, reject) => {
       this.storage.ready()
         .then(() => {
           this.storage.get(this.appConstants.Application.TODO_DB_KEY)
-            .then((secsDb: Array<SectionDb>) => {
+            .then((secsDb: SectionDb[]) => {
               if (secsDb) {
                 let secs = secsDb.map((secDb: SectionDb) => {
                   return new Section(secDb.id, secDb.creationDate, secDb.type, secDb.description);
@@ -227,7 +227,7 @@ export class TodoDataService {
       this.storage.ready()
         .then(() => {
           this.storage.get(this.appConstants.Application.TODO_DB_KEY)
-            .then((secsDb: Array<SectionDb>) => {
+            .then((secsDb: SectionDb[]) => {
               let sIndex = secsDb.findIndex((secDb: SectionDb) => {
                 return this.areSectionsEqual(secDb, section);
               });
@@ -277,7 +277,7 @@ export class TodoDataService {
       this.storage.ready()
         .then(() => {
           this.storage.get(this.appConstants.Application.TODO_DB_KEY)
-            .then((secsDb: Array<SectionDb>) => {
+            .then((secsDb: SectionDb[]) => {
               let sIndex = secsDb.findIndex((secDb: SectionDb) => {
                 return this.areSectionsEqual(secDb, section);
               });
@@ -313,12 +313,12 @@ export class TodoDataService {
    *
    * @returns {Promise<T>}
    */
-  public getTasksForSections(section: Section): Promise<Array<Task>> {
+  public getTasksForSections(section: Section): Promise<Task[]> {
     return new Promise((resolve, reject) => {
       this.storage.ready()
         .then(() => {
           this.storage.get(this.appConstants.Application.TODO_DB_KEY)
-            .then((secsDb: Array<SectionDb>) => {
+            .then((secsDb: SectionDb[]) => {
               let sIndex = secsDb.findIndex((secDb: SectionDb) => {
                 return this.areSectionsEqual(secDb, section);
               });

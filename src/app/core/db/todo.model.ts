@@ -27,7 +27,7 @@ export class SectionDb implements ISection {
   creationDate: string;
   type: string;
   description: string;
-  tasks: Array<TaskDb>;
+  tasks: TaskDb[];
 
   constructor(id: string) {
     this.id = id;

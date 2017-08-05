@@ -18,7 +18,7 @@ export class SectionEditComponent implements OnInit {
   private appConstants: AppConstantsService;
   private utils: UtilsService;
 
-  public types: Array<any>;
+  public types: any[];
   private section: Section;
 
   constructor(viewCtrl: ViewController, navParams: NavParams, translate: TranslateService, appConstantsService: AppConstantsService, utilsService: UtilsService) {

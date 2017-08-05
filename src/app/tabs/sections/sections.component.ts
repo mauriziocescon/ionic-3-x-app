@@ -19,7 +19,7 @@ export class SectionsComponent implements OnInit {
   private actions: ActionsService;
   private translate: TranslateService;
 
-  public sections: Array<Section>;
+  public sections: Section[];
 
   constructor(navCtrl: NavController, modalCtrl: ModalController, todoDataService: TodoDataService, utils: UtilsService, actionsService: ActionsService, translate: TranslateService) {
     this.navCtrl = navCtrl;
@@ -36,7 +36,7 @@ export class SectionsComponent implements OnInit {
 
   public ionViewWillEnter(): void {
     this.todoDataService.getSections()
-      .then((sections: Array<Section>) => {
+      .then((sections: Section[]) => {
         this.sections = sections;
       });
   }

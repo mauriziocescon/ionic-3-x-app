@@ -7,7 +7,7 @@ import { AppConstantsService } from "./app-constants.service";
 @Injectable()
 export class ActionsService {
   private appConstants: AppConstantsService;
-  private history: Array<string>;
+  private history: string[];
 
   constructor(AppConstantsService: AppConstantsService) {
     this.appConstants = AppConstantsService;
@@ -21,7 +21,7 @@ export class ActionsService {
     }
   }
 
-  public getActions(): Array<string> {
+  public getActions(): string[] {
     return this.history;
   }
 }
