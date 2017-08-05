@@ -2,9 +2,6 @@ import { Component, OnInit } from "@angular/core";
 
 import { ViewController, AlertController } from "ionic-angular";
 
-import "rxjs/Rx";
-import * as Rx from "rxjs";
-
 import { AppConstantsService } from "../../core/core.module";
 
 @Component({
@@ -28,9 +25,7 @@ export class LoginComponent implements OnInit {
   }
 
   get canLogin(): boolean {
-    return this.username && this.username.length &&
-      this.password && this.password.length &&
-      !this.loading;
+    return this.username && this.password && !this.loading;
   }
 
   public ngOnInit(): void {
@@ -40,26 +35,10 @@ export class LoginComponent implements OnInit {
   login(): void {
     if (this.canLogin) {
       this.loading = true;
-      // Rx.Observable.fromPromise(this.auth.login(this.username, this.password))
-      //   .subscribe(
-      //     () => {
-      //       this.viewCtrl.dismiss(true);
-      //       this.loading = false;
-      //     },
-      //     (err) => {
-      //       this.loading = false;
-      //       let alert = this.alertCtrl.create({
-      //         title: err.code,
-      //         subTitle: err.message,
-      //         buttons: ["Dismiss"]
-      //       });
-      //       alert.present();
-      //     },
-      //     () => {
-      //       this.loading = false;
-      //       console.log("Request Complete");
-      //     }
-      //   );
+
+      // ...
+      this.viewCtrl.dismiss(true);
+      this.loading = false;
     }
   }
 
