@@ -21,10 +21,10 @@ export class LoginComponent implements OnInit {
 
   private loading: boolean;
 
-  constructor(viewCtrl: ViewController, alertCtrl: AlertController, authService: AuthService) {
+  constructor(viewCtrl: ViewController, alertCtrl: AlertController/*, authService: AuthService*/) {
     this.viewCtrl = viewCtrl;
     this.alertCtrl = alertCtrl;
-    this.auth = authService;
+    // this.auth = authService;
   }
 
   get canLogin(): boolean {
@@ -40,26 +40,26 @@ export class LoginComponent implements OnInit {
   login(): void {
     if (this.canLogin) {
       this.loading = true;
-      Rx.Observable.fromPromise(this.auth.login(this.username, this.password))
-        .subscribe(
-          () => {
-            this.viewCtrl.dismiss(true);
-            this.loading = false;
-          },
-          (err) => {
-            this.loading = false;
-            let alert = this.alertCtrl.create({
-              title: err.code,
-              subTitle: err.message,
-              buttons: ["Dismiss"]
-            });
-            alert.present();
-          },
-          () => {
-            this.loading = false;
-            console.log("Request Complete");
-          }
-        );
+      // Rx.Observable.fromPromise(this.auth.login(this.username, this.password))
+      //   .subscribe(
+      //     () => {
+      //       this.viewCtrl.dismiss(true);
+      //       this.loading = false;
+      //     },
+      //     (err) => {
+      //       this.loading = false;
+      //       let alert = this.alertCtrl.create({
+      //         title: err.code,
+      //         subTitle: err.message,
+      //         buttons: ["Dismiss"]
+      //       });
+      //       alert.present();
+      //     },
+      //     () => {
+      //       this.loading = false;
+      //       console.log("Request Complete");
+      //     }
+      //   );
     }
   }
 
