@@ -17,7 +17,7 @@
   </ion-item>
   <ion-item>
     <ion-label>{{ "TYPE" | translate }}</ion-label>
-    <ion-select [(ngModel)]="section.type" okText="Okay" cancelText="Dismiss">
+    <ion-select [(ngModel)]="section.type" okText="{{ 'OK' | translate }}" cancelText="{{ 'CANCEL' | translate }}">
       <ion-option *ngFor="let value of types" [value]="value">
         {{ getSectionTypeDesc(value) | translate }}
       </ion-option>

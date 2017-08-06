@@ -9,7 +9,7 @@
 <ion-content>
   <ion-item>
     <ion-label>{{ "LANGUAGE" | translate }}</ion-label>
-    <ion-select [(ngModel)]="selectedLanguageId" okText="Okay" cancelText="Dismiss" (ionChange)="selectLanguage()">
+    <ion-select [(ngModel)]="selectedLanguageId" okText="{{ 'OK' | translate }}" cancelText="{{ 'CANCEL' | translate }}" (ionChange)="selectLanguage()">
       <ion-option *ngFor="let language of languages" [value]="language">
         {{ language }}
       </ion-option>
