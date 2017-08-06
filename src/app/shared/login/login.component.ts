@@ -2,8 +2,6 @@ import { Component, OnInit } from "@angular/core";
 
 import { ViewController, AlertController } from "ionic-angular";
 
-import { AppConstantsService } from "../../core/core.module";
-
 @Component({
   selector: "login",
   templateUrl: "login.component.html"
