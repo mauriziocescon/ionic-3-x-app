@@ -11,7 +11,6 @@ import { AppConstantsService } from "../../core/core.module";
 export class LoginComponent implements OnInit {
   private viewCtrl: ViewController;
   private alertCtrl: AlertController;
-  private appConstants: AppConstantsService;
 
   public username: string;
   public password: string;
@@ -19,11 +18,9 @@ export class LoginComponent implements OnInit {
   private loading: boolean;
 
   constructor(viewCtrl: ViewController,
-              alertCtrl: AlertController//,
-              /*appConstantsService: AppConstantsService*/) {
+              alertCtrl: AlertController) {
     this.viewCtrl = viewCtrl;
     this.alertCtrl = alertCtrl;
-    // this.appConstants = appConstantsService;
   }
 
   get canLogin(): boolean {
