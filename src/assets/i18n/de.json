@@ -29,9 +29,9 @@
   "SECTION_EDIT": {
     "CANCEL": "Abbrechen",
     "CLOSE": "Schließen",
+    "NAME": "Name",
     "OK": "Ok",
     "SAVE": "Speichern",
-    "NAME": "Name",
     "TITLE": "ToDo",
     "TYPE": "Typ"
   },
@@ -47,8 +47,8 @@
     "TAB_3_TITLE": "Einstellungen"
   },
   "TASKS": {
-    "ACTION_DEL_TASK": "Gelöschte Aufgabe {{value}}",
     "ACTION_CRE_TASK": "Kategorie {{value}}",
+    "ACTION_DEL_TASK": "Gelöschte Aufgabe {{value}}",
     "ACTION_MOD_TASK": "Geänderte Aufgabe {{value}}",
     "CREATION_DATE": "Geschaffen am ",
     "DELETE": "Löschen",
