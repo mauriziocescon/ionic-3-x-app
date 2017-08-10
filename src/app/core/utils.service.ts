@@ -30,17 +30,17 @@ export class UtilsService {
   public getTranslateKeyForSectionType(type: string): string {
     switch (type) {
       case this.appConstants.Application.SECTION_TYPES[0]:
-        return "SEC_TYPE_IMPORTANT";
+        return "CORE.SEC_TYPE_IMPORTANT";
       case this.appConstants.Application.SECTION_TYPES[1]:
-        return "SEC_TYPE_URGENT";
+        return "CORE.SEC_TYPE_URGENT";
       case this.appConstants.Application.SECTION_TYPES[2]:
-        return "SEC_TYPE_CONTACTS";
+        return "CORE.SEC_TYPE_CONTACTS";
       case this.appConstants.Application.SECTION_TYPES[3]:
-        return "SEC_TYPE_WORK";
+        return "CORE.SEC_TYPE_WORK";
       case this.appConstants.Application.SECTION_TYPES[4]:
-        return "SEC_TYPE_SPORT";
+        return "CORE.SEC_TYPE_SPORT";
       default:
-        return "SEC_TYPE_OTHER";
+        return "CORE.SEC_TYPE_OTHER";
     }
   }
 

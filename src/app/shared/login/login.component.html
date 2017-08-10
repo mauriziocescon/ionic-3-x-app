@@ -1,11 +1,11 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      {{ "LOGIN" | translate }}
+      {{ "LOGIN.TITLE" | translate }}
     </ion-title>
     <ion-buttons>
       <button ion-button icon-only (click)="dismiss()">
-        {{ "CLOSE" | translate }}
+        {{ "LOGIN.CLOSE" | translate }}
       </button>
     </ion-buttons>
   </ion-navbar>
@@ -14,13 +14,13 @@
 <ion-content>
 
   <ion-item>
-    <ion-input type="email" [(ngModel)]="username" placeholder="{{ 'USER_LABEL' | translate }}" required></ion-input>
+    <ion-input type="email" [(ngModel)]="username" placeholder="{{ 'LOGIN.USER_LABEL' | translate }}" required></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-input type="password" [(ngModel)]="password" placeholder="{{ 'PASSWORD_LABEL' | translate }}" required></ion-input>
+    <ion-input type="password" [(ngModel)]="password" placeholder="{{ 'LOGIN.PASSWORD_LABEL' | translate }}" required></ion-input>
   </ion-item>
 
-  <button ion-button bottom block (click)="login()">{{ "LOGIN" | translate }}</button>
+  <button ion-button bottom block (click)="login()">{{ "LOGIN.LOGIN" | translate }}</button>
 
 </ion-content>

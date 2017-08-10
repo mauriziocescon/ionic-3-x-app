@@ -64,7 +64,7 @@ export class SectionsComponent implements OnInit {
           .then(() => {
             this.sections.splice(0, 0, editSection);
 
-            this.translate.get("ACTION_CRE_SEC", {value: editSection.description})
+            this.translate.get("SECTIONS.ACTION_CRE_SEC", {value: editSection.description})
               .subscribe((res: string) => {
                 this.actions.addAction(res);
               });
@@ -82,7 +82,7 @@ export class SectionsComponent implements OnInit {
           return section.id != sec.id;
         });
 
-        this.translate.get("ACTION_DEL_SEC", {value: section.description})
+        this.translate.get("SECTIONS.ACTION_DEL_SEC", {value: section.description})
           .subscribe((res: string) => {
             this.actions.addAction(res);
           });
@@ -100,7 +100,7 @@ export class SectionsComponent implements OnInit {
             section = editSection;
             this.ionViewWillEnter();
 
-            this.translate.get("ACTION_MOD_SEC", {value: section.description})
+            this.translate.get("SECTIONS.ACTION_MOD_SEC", {value: section.description})
               .subscribe((res: string) => {
                 this.actions.addAction(res);
               });

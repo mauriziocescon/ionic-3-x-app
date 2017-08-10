@@ -1,15 +1,15 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      {{ "SETTINGS" | translate }}
+      {{ "SETTINGS.TITLE" | translate }}
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-item>
-    <ion-label>{{ "LANGUAGE" | translate }}</ion-label>
-    <ion-select [(ngModel)]="selectedLanguageId" okText="{{ 'OK' | translate }}" cancelText="{{ 'CANCEL' | translate }}" (ionChange)="selectLanguage()">
+    <ion-label>{{ "SETTINGS.LANGUAGE" | translate }}</ion-label>
+    <ion-select [(ngModel)]="selectedLanguageId" okText="{{ 'SETTINGS.OK' | translate }}" cancelText="{{ 'SETTINGS.CANCEL' | translate }}" (ionChange)="selectLanguage()">
       <ion-option *ngFor="let language of languages" [value]="language">
         {{ language }}
       </ion-option>

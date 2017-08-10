@@ -23,7 +23,13 @@ export class TasksComponent implements OnInit {
   private section: Section;
   public tasks: Task[];
 
-  constructor(navCtrl: NavController, navParams: NavParams, modalCtrl: ModalController, todoDataService: TodoDataService, utils: UtilsService, actionsService: ActionsService, translate: TranslateService) {
+  constructor(navCtrl: NavController,
+              navParams: NavParams,
+              modalCtrl: ModalController,
+              todoDataService: TodoDataService,
+              utils: UtilsService,
+              actionsService: ActionsService,
+              translate: TranslateService) {
     this.navCtrl = navCtrl;
     this.navParams = navParams;
     this.modalCtrl = modalCtrl;
@@ -56,7 +62,7 @@ export class TasksComponent implements OnInit {
           .then(() => {
             this.tasks.splice(0, 0, editTask);
 
-            this.translate.get("ACTION_CRE_TASK", {value: editTask.description})
+            this.translate.get("TASKS.ACTION_CRE_TASK", {value: editTask.description})
               .subscribe((res: string) => {
                 this.actions.addAction(res);
               });
@@ -74,7 +80,7 @@ export class TasksComponent implements OnInit {
           return task.id != t.id;
         });
 
-        this.translate.get("ACTION_DEL_TASK", {value: task.description})
+        this.translate.get("TASKS.ACTION_DEL_TASK", {value: task.description})
           .subscribe((res: string) => {
             this.actions.addAction(res);
           });
@@ -92,7 +98,7 @@ export class TasksComponent implements OnInit {
             task = editTask;
 
             this.ionViewWillEnter();
-            this.translate.get("ACTION_MOD_TASK", {value: task.description})
+            this.translate.get("TASKS.ACTION_MOD_TASK", {value: task.description})
               .subscribe((res: string) => {
                 this.actions.addAction(res);
               });

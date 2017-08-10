@@ -1,11 +1,11 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      {{ "TASK" | translate }}
+      {{ "TASK_EDIT.TASK" | translate }}
     </ion-title>
     <ion-buttons>
       <button ion-button icon-only (click)="dismiss()">
-        {{ "CLOSE" | translate }}
+        {{ "TASK_EDIT.CLOSE" | translate }}
       </button>
     </ion-buttons>
   </ion-navbar>
@@ -13,7 +13,7 @@
 
 <ion-content>
   <ion-item>
-    <ion-input type="text" [(ngModel)]="task.description" required></ion-input>
+    <ion-input type="text" placeholder="{{ 'TASK_EDIT.DESCRIPTION' | translate }}" [(ngModel)]="task.description" required></ion-input>
   </ion-item>
-  <button ion-button bottom block (click)="save()">{{ "SAVE" | translate }}</button>
+  <button ion-button bottom block (click)="save()">{{ "TASK_EDIT.SAVE" | translate }}</button>
 </ion-content>

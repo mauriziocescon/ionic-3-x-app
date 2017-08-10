@@ -20,11 +20,11 @@
           <img [hidden]="task.done" src="assets/imgs/todo.svg">
         </ion-avatar>
         <h2>{{ task.description }}</h2>
-        <h3>{{ "CREATION_DATE" | translate }} {{ task.creationDate | date:"medium" }}</h3>
+        <h3>{{ "TASKS.CREATION_DATE" | translate }} {{ task.creationDate | date:"medium" }}</h3>
       </button>
       <ion-item-options side="right">
-        <button ion-button color="danger" (click)="delete(task)">{{ "DELETE" | translate }}</button>
-        <button ion-button (click)="modify(task)">{{ "MODIFY" | translate }}</button>
+        <button ion-button color="danger" (click)="delete(task)">{{ "TASKS.DELETE" | translate }}</button>
+        <button ion-button (click)="modify(task)">{{ "TASKS.MODIFY" | translate }}</button>
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>

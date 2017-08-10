@@ -1,41 +1,63 @@
 {
-  "ACTION_CRE_SEC": "Creata sezione {{value}}",
-  "ACTION_CRE_TASK": "Creata sezione {{value}}",
-  "ACTION_DEL_SEC": "Rimossa sezione {{value}}",
-  "ACTION_DEL_TASK": "Rimossa sezione {{value}}",
-  "ACTION_MOD_SEC": "Modificata sezione {{value}}",
-  "ACTION_MOD_TASK": "Modificata sezione {{value}}",
-  "ACTIONS_HISTORY": "Azioni recenti",
-  "CANCEL": "Annulla",
-  "CHECK_TODOS": "Controlla il tab todo!",
-  "CLOSE": "Chiudi",
-  "CREATION_DATE": "Creato il ",
-  "DELETE": "Rimuovi",
-  "DESCRIPTION": "Descrizione",
-  "LANGUAGE": "Lingua",
-  "LOADING": "Please wait...",
-  "LOGIN": "Login",
-  "MODIFY": "Modifica",
-  "NAME": "Nome",
-  "OK": "Ok",
-  "PASSWORD_LABEL": "Password",
-  "SAVE": "Salva",
-  "SEC_TYPE_CONTACTS": "Contatti",
-  "SEC_TYPE_IMPORTANT": "Preferiti",
-  "SEC_TYPE_OTHER": "Altro",
-  "SEC_TYPE_SPORT": "Sport",
-  "SEC_TYPE_URGENT": "Urgenti",
-  "SEC_TYPE_WORK": "Lavoro",
-  "SECTION": "ToDo",
-  "SECTIONS": "ToDos",
-  "SETTINGS": "Settings",
-  "TAB_1_TITLE": "ToDos",
-  "TAB_2_TITLE": "Ultime azioni",
-  "TAB_3_TITLE": "Settings",
-  "TASK": "Task",
-  "TASKS": "Tasks",
-  "TITLE": "Titolo",
-  "TODOS_SUCCESS": "Todos importati",
-  "TYPE": "Tipo",
-  "USER_LABEL": "Nome utente"
+  "ACTIONS_HISTORY": {
+    "TITLE": "Azioni recenti"
+  },
+  "CORE": {
+    "SEC_TYPE_CONTACTS": "Contatti",
+    "SEC_TYPE_IMPORTANT": "Preferiti",
+    "SEC_TYPE_OTHER": "Altro",
+    "SEC_TYPE_SPORT": "Sport",
+    "SEC_TYPE_URGENT": "Urgenti",
+    "SEC_TYPE_WORK": "Lavoro"
+  },
+  "LOGIN": {
+    "CLOSE": "Chiudi",
+    "LOGIN": "Login",
+    "PASSWORD_LABEL": "Password",
+    "TITLE": "Login",
+    "USER_LABEL": "Nome utente"
+  },
+  "SECTIONS": {
+    "ACTION_CRE_SEC": "Creata sezione {{value}}",
+    "ACTION_DEL_SEC": "Rimossa sezione {{value}}",
+    "ACTION_MOD_SEC": "Modificata sezione {{value}}",
+    "CREATION_DATE": "Creato il ",
+    "DELETE": "Rimuovi",
+    "MODIFY": "Modifica",
+    "TITLE": "ToDos"
+  },
+  "SECTION_EDIT": {
+    "CANCEL": "Annulla",
+    "CLOSE": "Chiudi",
+    "OK": "Ok",
+    "SAVE": "Salva",
+    "NAME": "Titolo",
+    "TITLE": "ToDo",
+    "TYPE": "Tipo"
+  },
+  "SETTINGS": {
+    "CANCEL": "Annulla",
+    "LANGUAGE": "Lingua",
+    "OK": "Ok",
+    "TITLE": "Settings"
+  },
+  "TABS": {
+    "TAB_1_TITLE": "ToDos",
+    "TAB_2_TITLE": "Ultime azioni",
+    "TAB_3_TITLE": "Settings"
+  },
+  "TASKS": {
+    "ACTION_CRE_TASK": "Creato task {{value}}",
+    "ACTION_DEL_TASK": "Rimosso task {{value}}",
+    "ACTION_MOD_TASK": "Modificato task {{value}}",
+    "CREATION_DATE": "Creato il ",
+    "DELETE": "Rimuovi",
+    "MODIFY": "Modifica"
+  },
+  "TASK_EDIT": {
+    "CLOSE": "Chiudi",
+    "DESCRIPTION": "Descrizione",
+    "SAVE": "Salva",
+    "TASK": "Task"
+  }
 }
