@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     return this.username && this.password && !this.loading;
   }
 
-  public ngOnInit(): void {
+  ngOnInit(): void {
     this.loading = false;
   }
 

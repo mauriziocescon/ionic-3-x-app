@@ -35,7 +35,7 @@ export class SectionsComponent implements OnInit {
     this.translate = translate;
   }
 
-  public ngOnInit(): void {
+  ngOnInit(): void {
     this.sections = [];
   }
 
