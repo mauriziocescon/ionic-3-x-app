@@ -16,7 +16,8 @@ export class TaskEditComponent implements OnInit {
 
   private task: Task;
 
-  constructor(viewCtrl: ViewController, navParams: NavParams) {
+  constructor(viewCtrl: ViewController,
+              navParams: NavParams) {
     this.viewCtrl = viewCtrl;
     this.navParams = navParams;
   }
