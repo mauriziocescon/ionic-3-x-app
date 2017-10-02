@@ -60,12 +60,7 @@ export class AppLanguageService {
   }
 
   protected getBrowserLang(): string {
-    const browserLanguage = "browserLanguage";
-    let lang: string = navigator[browserLanguage];
-
-    if (lang === undefined) {
-      lang = navigator.language;
-    }
+    let lang: string = navigator.language;
 
     if (lang.length > 0) {
       lang = lang.toLowerCase();
