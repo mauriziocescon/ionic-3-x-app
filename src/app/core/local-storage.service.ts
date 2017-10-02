@@ -26,7 +26,7 @@ export class LocalStorageService {
       const result = localStorage.getItem(this.prefix + "_" + key.toString());
       return result !== null ? JSON.parse(result) : undefined;
     } catch (e) {
-      // log error
+      console.warn(e);
       return undefined;
     }
   }
@@ -40,7 +40,7 @@ export class LocalStorageService {
         localStorage.setItem(this.prefix + "_" + key.toString(), result);
       }
     } catch (e) {
-      // log error
+      console.warn(e);
     }
   }
 
@@ -48,7 +48,7 @@ export class LocalStorageService {
     try {
       localStorage.removeItem(this.prefix + "_" + key.toString());
     } catch (e) {
-      // log error
+      console.warn(e);
     }
   }
 
@@ -60,7 +60,7 @@ export class LocalStorageService {
         }
       }
     } catch (e) {
-      // log error
+      console.warn(e);
     }
   }
 }
