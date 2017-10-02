@@ -10,8 +10,8 @@ export class LoginComponent implements OnInit {
   private viewCtrl: ViewController;
   private alertCtrl: AlertController;
 
-  public username: string;
-  public password: string;
+  public username: string | undefined;
+  public password: string | undefined;
 
   private loading: boolean;
 
@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   }
 
   get canLogin(): boolean {
-    return this.username && this.password && !this.loading;
+    return this.username !== undefined && this.password !== undefined && !this.loading;
   }
 
   ngOnInit(): void {
