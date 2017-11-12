@@ -11,6 +11,10 @@ Todo-list built on ionic 3.x, angular, ES2017
 
 4. On the console, run ``npm run serve-lab`` in order to launch the application 
 
+## Backend implementation 
+
+Definition of mock responses using [json-server](https://github.com/typicode/json-server) and [faker](https://github.com/Marak/faker.js) (APIs available at `http://localhost:5000`)
+
 ## Libs & Tooling
 
 1. [Angular 4.x](https://angular.io) 

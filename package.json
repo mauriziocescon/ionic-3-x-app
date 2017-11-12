@@ -10,13 +10,14 @@
     "npm": ">=5.5.1"
   },
   "scripts": {
+    "postinstall": "node mock-server/db-creator.js",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
-    "serve-lab": "ionic-app-scripts serve --lab",
-    "serve-ios": "ionic-app-scripts serve --platform ios",
-    "serve-and": "ionic-app-scripts serve --platform android",
-    "serve-bro": "ionic-app-scripts serve --platform browser"
+    "serve-lab": "ionic-app-scripts serve --lab | json-server --watch mock-server/db.json --port 5000",
+    "serve-ios": "ionic-app-scripts serve --platform ios | json-server --watch mock-server/db.json --port 5000",
+    "serve-and": "ionic-app-scripts serve --platform android | json-server --watch mock-server/db.json --port 5000",
+    "serve-bro": "ionic-app-scripts serve --platform browser | json-server --watch mock-server/db.json --port 5000"
   },
   "config": {
     "ionic_app_entry_point": "src/main.ts"
@@ -57,7 +58,9 @@
     "@ionic/app-scripts": "3.0.1",
     "@ionic/cli-plugin-cordova": "1.6.2",
     "@ionic/cli-plugin-ionic-angular": "1.4.1",
-    "typescript": "2.5.3"
+    "faker": "4.1.0",
+    "json-server": "0.12.1",
+    "typescript": "2.6.1"
   },
   "cordova": {
     "plugins": {
