@@ -20,6 +20,26 @@
     "serve-and": "ionic-app-scripts serve --platform android | npm run json-server",
     "serve-bro": "ionic-app-scripts serve --platform browser | npm run json-server"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mauriziocescon/ionic-app"
+  },
+  "keywords": [
+    "angular",
+    "cescon",
+    "cordova",
+    "ionic",
+    "json-server",
+    "maurizio",
+    "sass",
+    "typescript"
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/brentertz/scapegoat/blob/master/LICENSE-MIT"
+    }
+  ],
   "config": {
     "ionic_app_entry_point": "src/main.ts"
   },
