@@ -1,4 +1,4 @@
-Todo-list built on ionic 3.x, angular, ES2017 
+Todo-list built on ionic 3.x, angular 4.x, ES2017 
 =========
 
 ## How to build the app
