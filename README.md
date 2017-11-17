@@ -13,7 +13,7 @@ Todo-list built on ionic 3.x, angular 4.x, ES2017
 
 ## Backend implementation 
 
-Definition of mock responses using [json-server](https://github.com/typicode/json-server) and [faker](https://github.com/Marak/faker.js) (APIs available at `http://localhost:5000`)
+Definition of mock responses using [json-server](https://github.com/typicode/json-server) and [faker](https://github.com/Marak/faker.js) (APIs available at `http://localhost:5000/api/`)
 
 ## Libs & Tooling
 
