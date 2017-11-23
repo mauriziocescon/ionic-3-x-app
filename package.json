@@ -11,15 +11,16 @@
   },
   "scripts": {
     "postinstall": "node ./mock-server/db-creator.js",
-    "start": "node ./mock-server/server.js | npm run build",
-    "json-server": "nodemon ./mock-server/server.js",
+    "start": "npm run build | npm run json-server",
+    "json-server": "node ./mock-server/server.js",
+    "json-server-watch": "nodemon ./mock-server/server.js",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
-    "serve-lab": "ionic-app-scripts serve --lab | npm run json-server",
-    "serve-ios": "ionic-app-scripts serve --platform ios | npm run json-server",
-    "serve-and": "ionic-app-scripts serve --platform android | npm run json-server",
-    "serve-bro": "ionic-app-scripts serve --platform browser | npm run json-server"
+    "serve-lab": "ionic-app-scripts serve --lab | npm run json-server-watch",
+    "serve-ios": "ionic-app-scripts serve --platform ios | npm run json-server-watch",
+    "serve-and": "ionic-app-scripts serve --platform android | npm run json-server-watch",
+    "serve-bro": "ionic-app-scripts serve --platform browser | npm run json-server-watch"
   },
   "repository": {
     "type": "git",
