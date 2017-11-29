@@ -1,7 +1,7 @@
 {
   "name": "ionic-app",
   "version": "1.0.0",
-  "description": "A todo-list application built on ionic 3.x and angular 4.x",
+  "description": "A todo-list application built on ionic 3.x and angular 5.x",
   "author": "Maurizio Cescon <maurizio.cescon@gmail.com> (http://www.mauriziocescon.com)",
   "homepage": "http://www.mauriziocescon.com",
   "private": false,
@@ -17,10 +17,10 @@
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
-    "serve-lab": "ionic-app-scripts serve --lab | npm run json-server-watch",
-    "serve-ios": "ionic-app-scripts serve --platform ios | npm run json-server-watch",
-    "serve-and": "ionic-app-scripts serve --platform android | npm run json-server-watch",
-    "serve-bro": "ionic-app-scripts serve --platform browser | npm run json-server-watch"
+    "serve-lab": "ionic-app-scripts serve --lab | npm run json-server",
+    "serve-ios": "ionic-app-scripts serve --platform ios | npm run json-server",
+    "serve-and": "ionic-app-scripts serve --platform android | npm run json-server",
+    "serve-bro": "ionic-app-scripts serve --platform browser | npm run json-server"
   },
   "repository": {
     "type": "git",
@@ -48,23 +48,23 @@
     "ionic_app_entry_point": "src/main.ts"
   },
   "dependencies": {
-    "@angular/animations": "4.4.6",
-    "@angular/common": "4.4.6",
-    "@angular/compiler": "4.4.6",
-    "@angular/compiler-cli": "4.4.6",
-    "@angular/core": "4.4.6",
-    "@angular/forms": "4.4.6",
-    "@angular/http": "4.4.6",
-    "@angular/platform-browser": "4.4.6",
-    "@angular/platform-browser-dynamic": "4.4.6",
-    "@angular/platform-server": "4.4.6",
-    "@ionic-native/core": "4.4.0",
-    "@ionic-native/splash-screen": "4.4.0",
-    "@ionic-native/status-bar": "4.4.0",
+    "@angular/animations": "5.0.3",
+    "@angular/common": "5.0.3",
+    "@angular/compiler": "5.0.3",
+    "@angular/compiler-cli": "5.0.3",
+    "@angular/core": "5.0.3",
+    "@angular/forms": "5.0.3",
+    "@angular/http": "5.0.3",
+    "@angular/platform-browser": "5.0.3",
+    "@angular/platform-browser-dynamic": "5.0.3",
+    "@angular/platform-server": "5.0.3",
+    "@ionic-native/core": "4.4.2",
+    "@ionic-native/splash-screen": "4.4.2",
+    "@ionic-native/status-bar": "4.4.2",
     "@ionic/storage": "2.1.3",
     "cordova-android": "6.4.0",
     "cordova-browser": "5.0.1",
-    "cordova-ios": "4.5.3",
+    "cordova-ios": "4.5.4",
     "cordova-plugin-console": "1.1.0",
     "cordova-plugin-device": "1.1.7",
     "cordova-plugin-splashscreen": "4.1.0",
@@ -80,13 +80,13 @@
     "zone.js": "0.8.18"
   },
   "devDependencies": {
-    "@ionic/app-scripts": "3.1.1",
+    "@ionic/app-scripts": "3.1.3",
     "@ionic/cli-plugin-cordova": "1.6.2",
     "@ionic/cli-plugin-ionic-angular": "1.4.1",
     "faker": "4.1.0",
     "json-server": "0.12.1",
     "nodemon": "1.12.1",
-    "typescript": "2.6.1"
+    "typescript": "2.6.2"
   },
   "cordova": {
     "plugins": {
