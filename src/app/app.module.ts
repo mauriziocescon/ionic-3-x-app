@@ -1,7 +1,6 @@
 import { NgModule, ErrorHandler } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpModule, Http } from "@angular/http";
-import { CurrencyPipe, DatePipe, DecimalPipe, PercentPipe } from "@angular/common";
 
 import { IonicApp, IonicModule, IonicErrorHandler } from "ionic-angular";
 import { Storage } from "@ionic/storage";
@@ -50,10 +49,7 @@ export function provideStorage() {
     AppComponent
   ],
   providers: [
-    CurrencyPipe,
-    DatePipe,
-    DecimalPipe,
-    PercentPipe,
+
     SplashScreen,
     StatusBar,
     {

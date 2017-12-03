@@ -1,5 +1,5 @@
 import { NgModule, Optional, SkipSelf, ModuleWithProviders, LOCALE_ID } from "@angular/core";
-import { CommonModule } from "@angular/common";
+import { CommonModule, CurrencyPipe, DatePipe, DecimalPipe, PercentPipe } from "@angular/common";
 
 import { ActionsService } from "./actions.service";
 import { AppConstantsService } from "./services/app-constants.service";
@@ -19,8 +19,6 @@ export function createLanguageIdLoader(appLanguageService: AppLanguageService) {
   imports: [
     CommonModule
   ],
-  declarations: [],
-  exports: []
 })
 export class CoreModule {
 
@@ -35,6 +33,11 @@ export class CoreModule {
     return {
       ngModule: CoreModule,
       providers: [
+        CurrencyPipe,
+        DatePipe,
+        DecimalPipe,
+        PercentPipe,
+
         ActionsService,
         AppConstantsService,
         AppLanguageService,
