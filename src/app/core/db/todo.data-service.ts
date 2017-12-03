@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { Storage } from "@ionic/storage";
 import "rxjs/Rx";
 
-import { AppConstantsService } from "../app-constants.service";
+import { AppConstantsService } from "../services/app-constants.service";
 
 import { Task } from "./tasks.model";
 import { Section } from "./sections.model";

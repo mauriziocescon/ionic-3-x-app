@@ -1,4 +1,4 @@
-import { Enum } from "../shared/shared.module";
+import { Enum } from "../../shared/shared.module";
 
 export class Api {
   public WS_URL = "";
@@ -14,8 +14,11 @@ export class Application {
 }
 
 export class Languages {
-  public SUPPORTED_LANG = ["en", "it", "de"];
-  public SUPPORTED_LANG_DESC = ["English", "Italiano", "Deutsch"];
+  public DE = "de";
+  public EN = "en";
+  public IT = "it";
+  public SUPPORTED_LANG = ["de", "en", "it"];
+  public SUPPORTED_LANG_DESC = ["Deutsch", "English", "Italiano"];
   public DEFAULT_LANGUAGE = "en";
 }
 

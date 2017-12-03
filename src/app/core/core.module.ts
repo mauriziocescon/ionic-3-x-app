@@ -2,13 +2,14 @@ import { NgModule, Optional, SkipSelf, ModuleWithProviders, LOCALE_ID } from "@a
 import { CommonModule } from "@angular/common";
 
 import { ActionsService } from "./actions.service";
-import { AppConstantsService } from "./app-constants.service";
-import { AppLanguageService } from "./app-language.service";
-import { LocalStorageService } from "./local-storage.service";
+import { AppConstantsService } from "./services/app-constants.service";
+import { AppLanguageService } from "./services/app-language.service";
+import { LocalStorageService } from "./services/local-storage.service";
+import { UtilsService } from "./services/utils.service";
+
 import { TodoDataService } from "./db/todo.data-service";
 import { Task } from "./db/tasks.model";
 import { Section } from "./db/sections.model";
-import { UtilsService } from "./utils.service";
 
 export function createLanguageIdLoader(appLanguageService: AppLanguageService) {
   return appLanguageService.getLanguageId();

@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 
-import { Enum } from "../shared/shared.module";
+import { Enum } from "../../shared/shared.module";
 
 import { AppConstantsService } from "./app-constants.service";
 
