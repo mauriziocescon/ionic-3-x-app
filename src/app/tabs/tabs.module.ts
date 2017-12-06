@@ -8,7 +8,7 @@ import { ActionsHistoryModule } from "./actions-history/actions-history.module";
 import { SectionsModule } from "./sections/sections.module";
 import { SettingsModule } from "./settings/settings.module";
 
-import { TabsComponent } from "./tabs.componenet";
+import { TabsComponent } from "./tabs.component";
 
 @NgModule({
   imports: [
