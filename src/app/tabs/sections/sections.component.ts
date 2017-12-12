@@ -1,7 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 
 import { NavController, ModalController } from "ionic-angular";
-import { TranslateService } from "ng2-translate";
+
+import { TranslateService } from "@ngx-translate/core";
 
 import { ActionsService, TodoDataService, Section, UtilsService } from "../../core/core.module";
 import { TasksComponent } from "./tasks/tasks.module";

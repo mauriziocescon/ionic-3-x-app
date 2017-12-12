@@ -1,10 +1,12 @@
 import { NgModule, ErrorHandler } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
-import { HttpModule, Http } from "@angular/http";
+import { HttpClient, HttpClientModule } from "@angular/common/http";
 
 import { IonicApp, IonicModule, IonicErrorHandler } from "ionic-angular";
 import { Storage } from "@ionic/storage";
-import { TranslateModule, TranslateStaticLoader, TranslateLoader } from "ng2-translate";
+
+import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
+import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 
 import { StatusBar } from "@ionic-native/status-bar";
 import { SplashScreen } from "@ionic-native/splash-screen";
@@ -15,8 +17,8 @@ import { TabsModule } from "./tabs/tabs.module";
 
 import { AppComponent } from "./app.component";
 
-export function createTranslateLoader(http: Http) {
-  return new TranslateStaticLoader(http, "assets/i18n/", ".json");
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, "assets/i18n/", ".json");
 }
 
 export function provideStorage() {
@@ -30,11 +32,13 @@ export function provideStorage() {
   imports: [
     IonicModule.forRoot(AppComponent),
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     TranslateModule.forRoot({
-      provide: TranslateLoader,
-      useFactory: (createTranslateLoader),
-      deps: [Http]
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient],
+      },
     }),
     CoreModule.forRoot(),
     SharedModule,
