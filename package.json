@@ -67,7 +67,6 @@
     "cordova-android": "7.0.0",
     "cordova-browser": "5.0.1",
     "cordova-ios": "4.5.4",
-    "cordova-plugin-console": "1.1.0",
     "cordova-plugin-device": "1.1.7",
     "cordova-plugin-splashscreen": "4.1.0",
     "cordova-plugin-statusbar": "2.3.0",
@@ -82,8 +81,6 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.1.5",
-    "@ionic/cli-plugin-cordova": "1.6.2",
-    "@ionic/cli-plugin-ionic-angular": "1.4.1",
     "faker": "4.1.0",
     "json-server": "0.12.1",
     "nodemon": "1.12.5",
@@ -91,7 +88,6 @@
   },
   "cordova": {
     "plugins": {
-      "cordova-plugin-console": {},
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-statusbar": {},
