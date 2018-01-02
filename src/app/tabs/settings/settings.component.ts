@@ -14,9 +14,9 @@ export class SettingsComponent implements OnInit {
   languages: string[];
   selectedLanguageId: string;
 
-  constructor(private navCtrl: NavController,
-              private translate: TranslateService,
-              private appLanguage: AppLanguageService) {
+  constructor(protected navCtrl: NavController,
+              protected translate: TranslateService,
+              protected appLanguage: AppLanguageService) {
   }
 
   ngOnInit(): void {

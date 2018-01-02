@@ -5,7 +5,7 @@ import { AppConstantsService } from "./app-constants.service";
 @Injectable()
 export class UtilsService {
 
-  constructor(private appConstants: AppConstantsService) {
+  constructor(protected appConstants: AppConstantsService) {
   }
 
   createUUID(): string {

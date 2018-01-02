@@ -8,10 +8,10 @@ import { ActionsService } from "../../core/core.module";
   templateUrl: "actions-history.component.html"
 })
 export class ActionsHistoryComponent implements OnInit {
-  private history: string[];
+  protected history: string[];
 
-  constructor(private navCtrl: NavController,
-              private actions: ActionsService) {
+  constructor(protected navCtrl: NavController,
+              protected actions: ActionsService) {
   }
 
   ngOnInit(): void {

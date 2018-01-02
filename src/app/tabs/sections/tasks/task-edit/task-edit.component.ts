@@ -11,10 +11,10 @@ import { Task } from "../../../../core/core.module";
   templateUrl: "task-edit.component.html"
 })
 export class TaskEditComponent implements OnInit {
-  private task: Task;
+  protected task: Task;
 
-  constructor(private viewCtrl: ViewController,
-              private navParams: NavParams) {
+  constructor(protected viewCtrl: ViewController,
+              protected navParams: NavParams) {
   }
 
   ngOnInit(): void {

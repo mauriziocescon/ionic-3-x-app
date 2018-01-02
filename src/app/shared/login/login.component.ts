@@ -7,13 +7,13 @@ import { ViewController, AlertController } from "ionic-angular";
   templateUrl: "login.component.html"
 })
 export class LoginComponent implements OnInit {
-  private viewCtrl: ViewController;
-  private alertCtrl: AlertController;
+  protected viewCtrl: ViewController;
+  protected alertCtrl: AlertController;
 
   username: string | undefined;
   password: string | undefined;
 
-  private loading: boolean;
+  protected loading: boolean;
 
   constructor(viewCtrl: ViewController,
               alertCtrl: AlertController) {

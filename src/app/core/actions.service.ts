@@ -6,9 +6,9 @@ import { AppConstantsService } from "./services/app-constants.service";
 
 @Injectable()
 export class ActionsService {
-  private history: string[];
+  protected history: string[];
 
-  constructor(private appConstants: AppConstantsService) {
+  constructor(protected appConstants: AppConstantsService) {
     this.history = [];
   }
 

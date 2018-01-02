@@ -20,8 +20,8 @@ import { SectionDb, TaskDb } from "./todo.model";
 @Injectable()
 export class TodoDataService {
 
-  constructor(private storage: Storage,
-              private appConstants: AppConstantsService) {
+  constructor(protected storage: Storage,
+              protected appConstants: AppConstantsService) {
     this.setupDb();
   }
 
@@ -65,7 +65,7 @@ export class TodoDataService {
    * @param section
    * @returns {boolean}
    */
-  private areSectionsEqual(sectionDb: SectionDb, section: Section): boolean {
+  protected areSectionsEqual(sectionDb: SectionDb, section: Section): boolean {
     return sectionDb.id === section.id;
   }
 
@@ -76,7 +76,7 @@ export class TodoDataService {
    * @param sectionDb
    * @param section
    */
-  private updateSection(sectionDb: SectionDb, section: Section): void {
+  protected updateSection(sectionDb: SectionDb, section: Section): void {
     // update fields
     sectionDb.creationDate = section.creationDate;
     sectionDb.type = section.type;
@@ -91,7 +91,7 @@ export class TodoDataService {
    * @param task
    * @returns {boolean}
    */
-  private areTasksEqual(taskDb: TaskDb, task: Task): boolean {
+  protected areTasksEqual(taskDb: TaskDb, task: Task): boolean {
     return taskDb.id === task.id;
   }
 
@@ -102,7 +102,7 @@ export class TodoDataService {
    * @param taskDb
    * @param task
    */
-  private updateTask(taskDb: TaskDb, task: Task): void {
+  protected updateTask(taskDb: TaskDb, task: Task): void {
     // update fields
     taskDb.creationDate = task.creationDate;
     taskDb.description = task.description;

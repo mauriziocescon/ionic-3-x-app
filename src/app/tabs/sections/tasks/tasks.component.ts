@@ -13,16 +13,16 @@ import { ActionsService } from "../../../core/actions.service";
   templateUrl: "tasks.component.html"
 })
 export class TasksComponent implements OnInit {
-  private section: Section;
+  protected section: Section;
   tasks: Task[];
 
-  constructor(private navCtrl: NavController,
-              private navParams: NavParams,
-              private modalCtrl: ModalController,
-              private todoDataService: TodoDataService,
-              private utils: UtilsService,
-              private actions: ActionsService,
-              private translate: TranslateService) {
+  constructor(protected navCtrl: NavController,
+              protected navParams: NavParams,
+              protected modalCtrl: ModalController,
+              protected todoDataService: TodoDataService,
+              protected utils: UtilsService,
+              protected actions: ActionsService,
+              protected translate: TranslateService) {
     this.section = this.navParams.get("section");
   }
 

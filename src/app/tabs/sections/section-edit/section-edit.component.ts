@@ -13,13 +13,13 @@ import { AppConstantsService, Section, UtilsService } from "../../../core/core.m
 })
 export class SectionEditComponent implements OnInit {
   types: any[];
-  private section: Section;
+  protected section: Section;
 
-  constructor(private viewCtrl: ViewController,
-              private navParams: NavParams,
-              private translate: TranslateService,
-              private appConstants: AppConstantsService,
-              private utils: UtilsService) {
+  constructor(protected viewCtrl: ViewController,
+              protected navParams: NavParams,
+              protected translate: TranslateService,
+              protected appConstants: AppConstantsService,
+              protected utils: UtilsService) {
   }
 
   ngOnInit(): void {

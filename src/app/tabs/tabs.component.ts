@@ -8,9 +8,9 @@ import { SettingsComponent } from "./settings/settings.component";
   templateUrl: "tabs.component.html"
 })
 export class TabsComponent implements OnInit {
-  private tab1Root: any;
-  private tab2Root: any;
-  private tab3Root: any;
+  protected tab1Root: any;
+  protected tab2Root: any;
+  protected tab3Root: any;
 
   constructor() {
   }

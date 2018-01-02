@@ -15,12 +15,12 @@ import { SectionEditComponent } from "./section-edit/section-edit.component";
 export class SectionsComponent implements OnInit {
   sections: Section[];
 
-  constructor(private navCtrl: NavController,
-              private modalCtrl: ModalController,
-              private todoDataService: TodoDataService,
-              private utils: UtilsService,
-              private actions: ActionsService,
-              private translate: TranslateService) {
+  constructor(protected navCtrl: NavController,
+              protected modalCtrl: ModalController,
+              protected todoDataService: TodoDataService,
+              protected utils: UtilsService,
+              protected actions: ActionsService,
+              protected translate: TranslateService) {
   }
 
   ngOnInit(): void {
