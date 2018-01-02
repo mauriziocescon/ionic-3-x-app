@@ -12,7 +12,7 @@ import { AppConstantsService, Section, UtilsService } from "../../../core/core.m
   templateUrl: "section-edit.component.html"
 })
 export class SectionEditComponent implements OnInit {
-  public types: any[];
+  types: any[];
   private section: Section;
 
   constructor(private viewCtrl: ViewController,
@@ -22,16 +22,16 @@ export class SectionEditComponent implements OnInit {
               private utils: UtilsService) {
   }
 
-  public ngOnInit(): void {
+  ngOnInit(): void {
     this.section = this.navParams.get("section");
     this.types = this.appConstants.Application.SECTION_TYPES;
   }
 
-  public getSectionTypeDesc(type: string): any {
+  getSectionTypeDesc(type: string): any {
     return this.utils.getTranslateKeyForSectionType(type);
   }
 
-  public save(): void {
+  save(): void {
     this.translate.get(this.utils.getTranslateKeyForSectionType(this.section.type))
       .subscribe((res: string) => {
         if (this.section.description.length === 0) {
@@ -41,7 +41,7 @@ export class SectionEditComponent implements OnInit {
       });
   }
 
-  public dismiss(): void {
+  dismiss(): void {
     this.viewCtrl.dismiss();
   }
 }

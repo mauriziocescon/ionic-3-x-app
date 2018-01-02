@@ -12,14 +12,14 @@ export class ActionsService {
     this.history = [];
   }
 
-  public addAction(desc: string): void {
+  addAction(desc: string): void {
     this.history.unshift(desc);
     if (this.history.length > this.appConstants.Application.ACTIONS_LENGHT) {
       this.history.pop();
     }
   }
 
-  public getActions(): string[] {
+  getActions(): string[] {
     return this.history;
   }
 }

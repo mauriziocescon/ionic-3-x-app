@@ -10,7 +10,7 @@ import { TabsComponent } from "./tabs/tabs.module";
   templateUrl: "app.component.html"
 })
 export class AppComponent {
-  public rootPage: any;
+  rootPage: any;
 
   constructor(platform: Platform,
               statusBar: StatusBar,

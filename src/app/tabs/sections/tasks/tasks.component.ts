@@ -14,7 +14,7 @@ import { ActionsService } from "../../../core/actions.service";
 })
 export class TasksComponent implements OnInit {
   private section: Section;
-  public tasks: Task[];
+  tasks: Task[];
 
   constructor(private navCtrl: NavController,
               private navParams: NavParams,
@@ -26,18 +26,18 @@ export class TasksComponent implements OnInit {
     this.section = this.navParams.get("section");
   }
 
-  public ngOnInit(): void {
+  ngOnInit(): void {
 
   }
 
-  public ionViewWillEnter(): void {
+  ionViewWillEnter(): void {
     this.todoDataService.getTasksForSections(this.section)
       .then((tasks: Task[]) => {
         this.tasks = tasks;
       });
   }
 
-  public addTask(): void {
+  addTask(): void {
     let newTask = new Task(this.utils.createUUID(), this.utils.getDate(), "", false);
 
     let taskEditModal = this.modalCtrl.create(TaskEditComponent, {task: newTask});
@@ -58,7 +58,7 @@ export class TasksComponent implements OnInit {
     taskEditModal.present();
   }
 
-  public delete(task: Task): void {
+  delete(task: Task): void {
     this.todoDataService.deleteTaskForSection(task, this.section)
       .then(() => {
         this.tasks = this.tasks.filter((t: Task) => {
@@ -72,7 +72,7 @@ export class TasksComponent implements OnInit {
       });
   }
 
-  public modify(task: Task): void {
+  modify(task: Task): void {
     const newTask = Object.assign({}, task);
 
     let taskEditModal = this.modalCtrl.create(TaskEditComponent, {task: newTask});
@@ -94,7 +94,7 @@ export class TasksComponent implements OnInit {
     taskEditModal.present();
   }
 
-  public changeStatus(task: Task): void {
+  changeStatus(task: Task): void {
     const newTask = Object.assign({}, task);
     newTask.done = !newTask.done;
 

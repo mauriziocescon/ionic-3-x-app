@@ -13,7 +13,7 @@ import { SectionEditComponent } from "./section-edit/section-edit.component";
   templateUrl: "sections.component.html"
 })
 export class SectionsComponent implements OnInit {
-  public sections: Section[];
+  sections: Section[];
 
   constructor(private navCtrl: NavController,
               private modalCtrl: ModalController,
@@ -27,22 +27,22 @@ export class SectionsComponent implements OnInit {
     this.sections = [];
   }
 
-  public ionViewWillEnter(): void {
+  ionViewWillEnter(): void {
     this.todoDataService.getSections()
       .then((sections: Section[]) => {
         this.sections = sections;
       });
   }
 
-  public getSectionIcon(section: Section): string {
+  getSectionIcon(section: Section): string {
     return this.utils.getIconForSectionType(section.type);
   }
 
-  public getSectionTypeDesc(section: Section): any {
+  getSectionTypeDesc(section: Section): any {
     return this.utils.getTranslateKeyForSectionType(section.type);
   }
 
-  public addSection(): void {
+  addSection(): void {
     let newSection = new Section(this.utils.createUUID(), this.utils.getDate(), "", "");
 
     let sectionEditModal = this.modalCtrl.create(SectionEditComponent, {section: newSection});
@@ -63,7 +63,7 @@ export class SectionsComponent implements OnInit {
     sectionEditModal.present();
   }
 
-  public delete(section: Section): void {
+  delete(section: Section): void {
     this.todoDataService.deleteSection(section)
       .then(() => {
         this.sections = this.sections.filter((sec: Section) => {
@@ -77,7 +77,7 @@ export class SectionsComponent implements OnInit {
       });
   }
 
-  public modify(section: Section): void {
+  modify(section: Section): void {
     const newSection = Object.assign({}, section);
 
     let taskEditModal = this.modalCtrl.create(SectionEditComponent, {section: newSection});
@@ -99,7 +99,7 @@ export class SectionsComponent implements OnInit {
     taskEditModal.present();
   }
 
-  public goToSection(section: Section): void {
+  goToSection(section: Section): void {
     this.navCtrl.push(TasksComponent, {
       section: section
     });

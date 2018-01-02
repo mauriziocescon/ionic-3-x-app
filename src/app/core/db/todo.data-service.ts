@@ -30,7 +30,7 @@ export class TodoDataService {
    *
    * @returns {Promise<T>}
    */
-  public setupDb(): any {
+  setupDb(): any {
     return new Promise((resolve, reject) => {
       this.storage.ready()
         .then(() => {
@@ -117,7 +117,7 @@ export class TodoDataService {
    * @param section An existing or new section
    * @returns {Promise<T>}
    */
-  public insertUpdateSection(section: Section): any {
+  insertUpdateSection(section: Section): any {
     return new Promise((resolve, reject) => {
       this.storage.ready()
         .then(() => {
@@ -155,7 +155,7 @@ export class TodoDataService {
    * @param section An existing section
    * @returns {Promise<T>}
    */
-  public deleteSection(section: Section): any {
+  deleteSection(section: Section): any {
     return new Promise((resolve, reject) => {
       this.storage.ready()
         .then(() => {
@@ -187,7 +187,7 @@ export class TodoDataService {
    *
    * @returns {Promise<T>}
    */
-  public getSections(): Promise<Section[]> {
+  getSections(): Promise<Section[]> {
     return new Promise((resolve, reject) => {
       this.storage.ready()
         .then(() => {
@@ -218,7 +218,7 @@ export class TodoDataService {
    * @param section An existing or new section
    * @returns {Promise<T>}
    */
-  public insertUpdateTaskForSection(task: Task, section: Section): any {
+  insertUpdateTaskForSection(task: Task, section: Section): any {
     return new Promise((resolve, reject) => {
       this.storage.ready()
         .then(() => {
@@ -268,7 +268,7 @@ export class TodoDataService {
    * @param section An existing section
    * @returns {Promise<T>}
    */
-  public deleteTaskForSection(task: Task, section: Section): any {
+  deleteTaskForSection(task: Task, section: Section): any {
     return new Promise((resolve, reject) => {
       this.storage.ready()
         .then(() => {
@@ -309,7 +309,7 @@ export class TodoDataService {
    *
    * @returns {Promise<T>}
    */
-  public getTasksForSections(section: Section): Promise<Task[]> {
+  getTasksForSections(section: Section): Promise<Task[]> {
     return new Promise((resolve, reject) => {
       this.storage.ready()
         .then(() => {

@@ -11,20 +11,20 @@ import { AppLanguageService } from "../../core/core.module";
   templateUrl: "settings.component.html"
 })
 export class SettingsComponent implements OnInit {
-  public languages: string[];
-  public selectedLanguageId: string;
+  languages: string[];
+  selectedLanguageId: string;
 
   constructor(private navCtrl: NavController,
               private translate: TranslateService,
               private appLanguage: AppLanguageService) {
   }
 
-  public ngOnInit(): void {
+  ngOnInit(): void {
     this.selectedLanguageId = this.appLanguage.getLanguageId();
     this.languages = this.appLanguage.getSupportedLanguagesList();
   }
 
-  public selectLanguage(): void {
+  selectLanguage(): void {
     if (this.appLanguage.getLanguageId() !== this.selectedLanguageId) {
       this.appLanguage.setLanguageId(this.selectedLanguageId);
     }

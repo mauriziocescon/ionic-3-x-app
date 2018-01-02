@@ -8,7 +8,7 @@ export class UtilsService {
   constructor(private appConstants: AppConstantsService) {
   }
 
-  public createUUID(): string {
+  createUUID(): string {
     let d = new Date().getTime();
     if (performance && typeof performance.now === "function") {
       d += performance.now(); //use high-precision timer if available
@@ -21,11 +21,11 @@ export class UtilsService {
     return uuid;
   }
 
-  public getDate(): string {
+  getDate(): string {
     return new Date().toISOString();
   }
 
-  public getTranslateKeyForSectionType(type: string): string {
+  getTranslateKeyForSectionType(type: string): string {
     switch (type) {
       case this.appConstants.Application.SECTION_TYPES[0]:
         return "CORE.SEC_TYPE_IMPORTANT";
@@ -42,7 +42,7 @@ export class UtilsService {
     }
   }
 
-  public getIconForSectionType(type: string): string {
+  getIconForSectionType(type: string): string {
     switch (type) {
       case this.appConstants.Application.SECTION_TYPES[0]:
         return "star";

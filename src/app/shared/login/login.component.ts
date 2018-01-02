@@ -10,8 +10,8 @@ export class LoginComponent implements OnInit {
   private viewCtrl: ViewController;
   private alertCtrl: AlertController;
 
-  public username: string | undefined;
-  public password: string | undefined;
+  username: string | undefined;
+  password: string | undefined;
 
   private loading: boolean;
 

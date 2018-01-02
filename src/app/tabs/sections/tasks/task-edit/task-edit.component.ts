@@ -17,19 +17,19 @@ export class TaskEditComponent implements OnInit {
               private navParams: NavParams) {
   }
 
-  public ngOnInit(): void {
+  ngOnInit(): void {
     this.task = this.navParams.get("task");
   }
 
-  public changeStatus(task: Task): void {
+  changeStatus(task: Task): void {
     task.done = !task.done;
   }
 
-  public save(): void {
+  save(): void {
     this.viewCtrl.dismiss(this.task);
   }
 
-  public dismiss(): void {
+  dismiss(): void {
     this.viewCtrl.dismiss();
   }
 }

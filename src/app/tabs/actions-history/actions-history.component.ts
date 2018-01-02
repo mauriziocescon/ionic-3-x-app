@@ -14,11 +14,11 @@ export class ActionsHistoryComponent implements OnInit {
               private actions: ActionsService) {
   }
 
-  public ngOnInit(): void {
+  ngOnInit(): void {
     this.history = [];
   }
 
-  public ionViewWillEnter(): void {
+  ionViewWillEnter(): void {
     this.history = this.actions.getActions();
   }
 }
