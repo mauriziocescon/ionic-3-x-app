@@ -11,19 +11,12 @@ import { AppLanguageService } from "../../core/core.module";
   templateUrl: "settings.component.html"
 })
 export class SettingsComponent implements OnInit {
-  private navCtrl: NavController;
-  private translate: TranslateService;
-  private appLanguage: AppLanguageService;
-
   public languages: string[];
   public selectedLanguageId: string;
 
-  constructor(navCtrl: NavController,
-              translate: TranslateService,
-              appLanguageService: AppLanguageService) {
-    this.navCtrl = navCtrl;
-    this.translate = translate;
-    this.appLanguage = appLanguageService;
+  constructor(private navCtrl: NavController,
+              private translate: TranslateService,
+              private appLanguage: AppLanguageService) {
   }
 
   public ngOnInit(): void {

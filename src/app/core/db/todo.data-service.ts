@@ -19,14 +19,9 @@ import { SectionDb, TaskDb } from "./todo.model";
 
 @Injectable()
 export class TodoDataService {
-  private storage: Storage;
-  private appConstants: AppConstantsService;
 
-  constructor(storage: Storage,
-              appConstantsService: AppConstantsService) {
-    this.storage = storage;
-    this.appConstants = appConstantsService;
-
+  constructor(private storage: Storage,
+              private appConstants: AppConstantsService) {
     this.setupDb();
   }
 

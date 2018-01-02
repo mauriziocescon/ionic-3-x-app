@@ -12,25 +12,14 @@ import { AppConstantsService, Section, UtilsService } from "../../../core/core.m
   templateUrl: "section-edit.component.html"
 })
 export class SectionEditComponent implements OnInit {
-  private viewCtrl: ViewController;
-  private navParams: NavParams;
-  private translate: TranslateService;
-  private appConstants: AppConstantsService;
-  private utils: UtilsService;
-
   public types: any[];
   private section: Section;
 
-  constructor(viewCtrl: ViewController,
-              navParams: NavParams,
-              translate: TranslateService,
-              appConstants: AppConstantsService,
-              utils: UtilsService) {
-    this.viewCtrl = viewCtrl;
-    this.navParams = navParams;
-    this.translate = translate;
-    this.appConstants = appConstants;
-    this.utils = utils;
+  constructor(private viewCtrl: ViewController,
+              private navParams: NavParams,
+              private translate: TranslateService,
+              private appConstants: AppConstantsService,
+              private utils: UtilsService) {
   }
 
   public ngOnInit(): void {

@@ -13,27 +13,14 @@ import { SectionEditComponent } from "./section-edit/section-edit.component";
   templateUrl: "sections.component.html"
 })
 export class SectionsComponent implements OnInit {
-  private navCtrl: NavController;
-  private modalCtrl: ModalController;
-  private todoDataService: TodoDataService;
-  private utils: UtilsService;
-  private actions: ActionsService;
-  private translate: TranslateService;
-
   public sections: Section[];
 
-  constructor(navCtrl: NavController,
-              modalCtrl: ModalController,
-              todoDataService: TodoDataService,
-              utils: UtilsService,
-              actions: ActionsService,
-              translate: TranslateService) {
-    this.navCtrl = navCtrl;
-    this.modalCtrl = modalCtrl;
-    this.todoDataService = todoDataService;
-    this.utils = utils;
-    this.actions = actions;
-    this.translate = translate;
+  constructor(private navCtrl: NavController,
+              private modalCtrl: ModalController,
+              private todoDataService: TodoDataService,
+              private utils: UtilsService,
+              private actions: ActionsService,
+              private translate: TranslateService) {
   }
 
   ngOnInit(): void {

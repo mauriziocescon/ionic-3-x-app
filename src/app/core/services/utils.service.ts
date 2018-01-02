@@ -4,10 +4,8 @@ import { AppConstantsService } from "./app-constants.service";
 
 @Injectable()
 export class UtilsService {
-  private appConstants: AppConstantsService;
 
-  constructor(appConstants: AppConstantsService) {
-    this.appConstants = appConstants;
+  constructor(private appConstants: AppConstantsService) {
   }
 
   public createUUID(): string {
