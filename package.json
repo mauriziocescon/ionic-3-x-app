@@ -6,7 +6,7 @@
   "homepage": "http://www.mauriziocescon.com",
   "private": false,
   "engines": {
-    "node": "=8.9.4",
+    "node": "=8.10.0",
     "npm": "=5.6.0"
   },
   "scripts": {
@@ -48,16 +48,16 @@
     "ionic_app_entry_point": "src/main.ts"
   },
   "dependencies": {
-    "@angular/animations": "5.2.7",
-    "@angular/common": "5.2.7",
-    "@angular/compiler": "5.2.7",
-    "@angular/compiler-cli": "5.2.7",
-    "@angular/core": "5.2.7",
-    "@angular/forms": "5.2.7",
-    "@angular/http": "5.2.7",
-    "@angular/platform-browser": "5.2.7",
-    "@angular/platform-browser-dynamic": "5.2.7",
-    "@angular/platform-server": "5.2.7",
+    "@angular/animations": "5.2.8",
+    "@angular/common": "5.2.8",
+    "@angular/compiler": "5.2.8",
+    "@angular/compiler-cli": "5.2.8",
+    "@angular/core": "5.2.8",
+    "@angular/forms": "5.2.8",
+    "@angular/http": "5.2.8",
+    "@angular/platform-browser": "5.2.8",
+    "@angular/platform-browser-dynamic": "5.2.8",
+    "@angular/platform-server": "5.2.8",
     "@ionic-native/core": "4.5.3",
     "@ionic-native/splash-screen": "4.5.3",
     "@ionic-native/status-bar": "4.5.3",
