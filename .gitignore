@@ -33,4 +33,4 @@ $RECYCLE.BIN/
 Thumbs.db
 UserInterfaceState.xcuserstate
 
-/mock-server/db.json
+/mock-server/db/db.json
