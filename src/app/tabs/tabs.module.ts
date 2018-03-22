@@ -1,14 +1,14 @@
-import { NgModule } from "@angular/core";
+import { NgModule } from '@angular/core';
 
-import { IonicModule } from "ionic-angular";
+import { IonicModule } from 'ionic-angular';
 
-import { SharedModule } from "../shared/shared.module";
+import { SharedModule } from '../shared/shared.module';
 
-import { ActionsHistoryModule } from "./actions-history/actions-history.module";
-import { SectionsModule } from "./sections/sections.module";
-import { SettingsModule } from "./settings/settings.module";
+import { ActionsHistoryModule } from './actions-history/actions-history.module';
+import { SectionsModule } from './sections/sections.module';
+import { SettingsModule } from './settings/settings.module';
 
-import { TabsComponent } from "./tabs.component";
+import { TabsComponent } from './tabs.component';
 
 @NgModule({
   imports: [
@@ -16,15 +16,15 @@ import { TabsComponent } from "./tabs.component";
     IonicModule.forRoot(TabsComponent),
     ActionsHistoryModule,
     SectionsModule,
-    SettingsModule
+    SettingsModule,
   ],
   declarations: [
-    TabsComponent
+    TabsComponent,
   ],
   exports: [
-    TabsComponent
+    TabsComponent,
   ],
-  providers: []
+  providers: [],
 })
 export class TabsModule {
 }

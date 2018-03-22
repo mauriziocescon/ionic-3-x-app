@@ -1,14 +1,14 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
-import { ViewController, NavParams } from "ionic-angular";
+import { ViewController, NavParams } from 'ionic-angular';
 
-import "rxjs/Rx";
+import 'rxjs/Rx';
 
-import { Task } from "../../../../core/core.module";
+import { Task } from '../../../../core/core.module';
 
 @Component({
-  selector: "task-edit",
-  templateUrl: "task-edit.component.html"
+  selector: 'task-edit',
+  templateUrl: 'task-edit.component.html',
 })
 export class TaskEditComponent implements OnInit {
   protected task: Task;
@@ -18,7 +18,7 @@ export class TaskEditComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.task = this.navParams.get("task");
+    this.task = this.navParams.get('task');
   }
 
   changeStatus(task: Task): void {

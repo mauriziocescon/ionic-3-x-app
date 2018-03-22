@@ -1,15 +1,15 @@
-import { NgModule, Optional, SkipSelf, ModuleWithProviders, LOCALE_ID } from "@angular/core";
-import { CommonModule, CurrencyPipe, DatePipe, DecimalPipe, PercentPipe } from "@angular/common";
+import { NgModule, Optional, SkipSelf, ModuleWithProviders, LOCALE_ID } from '@angular/core';
+import { CommonModule, CurrencyPipe, DatePipe, DecimalPipe, PercentPipe } from '@angular/common';
 
-import { ActionsService } from "./actions.service";
-import { AppConstantsService } from "./services/app-constants.service";
-import { AppLanguageService } from "./services/app-language.service";
-import { LocalStorageService } from "./services/local-storage.service";
-import { UtilsService } from "./services/utils.service";
+import { ActionsService } from './actions.service';
+import { AppConstantsService } from './services/app-constants.service';
+import { AppLanguageService } from './services/app-language.service';
+import { LocalStorageService } from './services/local-storage.service';
+import { UtilsService } from './services/utils.service';
 
-import { TodoDataService } from "./db/todo.data-service";
-import { Task } from "./db/tasks.model";
-import { Section } from "./db/sections.model";
+import { TodoDataService } from './db/todo.data-service';
+import { Task } from './db/tasks.model';
+import { Section } from './db/sections.model';
 
 export function createLanguageIdLoader(appLanguageService: AppLanguageService) {
   return appLanguageService.getLanguageId();
@@ -17,7 +17,7 @@ export function createLanguageIdLoader(appLanguageService: AppLanguageService) {
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
   ],
 })
 export class CoreModule {
@@ -25,7 +25,7 @@ export class CoreModule {
   constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
     if (parentModule) {
       throw new Error(
-        "CoreModule is already loaded. Import it in the AppModule only");
+        'CoreModule is already loaded. Import it in the AppModule only');
     }
   }
 
@@ -47,9 +47,9 @@ export class CoreModule {
         {
           provide: LOCALE_ID,
           useFactory: (createLanguageIdLoader),
-          deps: [AppLanguageService]
-        }
-      ]
+          deps: [AppLanguageService],
+        },
+      ],
     };
   }
 }
@@ -62,5 +62,5 @@ export {
   TodoDataService,
   Task,
   Section,
-  UtilsService
+  UtilsService,
 };

@@ -1,11 +1,11 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
-import { ActionsHistoryComponent } from "./actions-history/actions-history.component";
-import { SectionsComponent } from "./sections/sections.component";
-import { SettingsComponent } from "./settings/settings.component";
+import { ActionsHistoryComponent } from './actions-history/actions-history.component';
+import { SectionsComponent } from './sections/sections.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @Component({
-  templateUrl: "tabs.component.html"
+  templateUrl: 'tabs.component.html',
 })
 export class TabsComponent implements OnInit {
   protected tab1Root: any;

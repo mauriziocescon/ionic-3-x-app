@@ -1,8 +1,8 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 
-import { Enum } from "../../shared/shared.module";
+import { Enum } from '../../shared/shared.module';
 
-import { AppConstantsService } from "./app-constants.service";
+import { AppConstantsService } from './app-constants.service';
 
 /**
  * Manage data in
@@ -19,7 +19,7 @@ export class LocalStorageService {
 
   getData<T>(key: Enum): T | undefined {
     try {
-      const result = localStorage.getItem(this.prefix + "_" + key.toString());
+      const result = localStorage.getItem(this.prefix + '_' + key.toString());
       return result !== null ? JSON.parse(result) : undefined;
     } catch (e) {
       console.warn(e);
@@ -30,10 +30,10 @@ export class LocalStorageService {
   setData(key: Enum, data: any): void {
     try {
       if (data === undefined) {
-        localStorage.removeItem(this.prefix + "_" + key.toString());
+        localStorage.removeItem(this.prefix + '_' + key.toString());
       } else {
         const result = JSON.stringify(data);
-        localStorage.setItem(this.prefix + "_" + key.toString(), result);
+        localStorage.setItem(this.prefix + '_' + key.toString(), result);
       }
     } catch (e) {
       console.warn(e);
@@ -42,7 +42,7 @@ export class LocalStorageService {
 
   removeData(key: Enum): void {
     try {
-      localStorage.removeItem(this.prefix + "_" + key.toString());
+      localStorage.removeItem(this.prefix + '_' + key.toString());
     } catch (e) {
       console.warn(e);
     }
@@ -51,7 +51,7 @@ export class LocalStorageService {
   removeAllData(): void {
     try {
       for (const key in localStorage) {
-        if (key.startsWith(this.prefix + "_")) {
+        if (key.startsWith(this.prefix + '_')) {
           localStorage.removeItem(key);
         }
       }

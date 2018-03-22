@@ -1,20 +1,20 @@
-import { NgModule } from "@angular/core";
+import { NgModule } from '@angular/core';
 
-import { IonicModule } from "ionic-angular";
+import { IonicModule } from 'ionic-angular';
 
-import { SharedModule } from "../../shared/shared.module";
+import { SharedModule } from '../../shared/shared.module';
 
-import { SettingsComponent } from "./settings.component";
+import { SettingsComponent } from './settings.component';
 
 @NgModule({
   imports: [
     SharedModule,
-    IonicModule.forRoot(SettingsComponent)
+    IonicModule.forRoot(SettingsComponent),
   ],
   declarations: [
-    SettingsComponent
+    SettingsComponent,
   ],
-  providers: []
+  providers: [],
 })
 export class SettingsModule {
 }

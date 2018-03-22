@@ -1,8 +1,8 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 
-import "rxjs/Rx";
+import 'rxjs/Rx';
 
-import { AppConstantsService } from "./services/app-constants.service";
+import { AppConstantsService } from './services/app-constants.service';
 
 @Injectable()
 export class ActionsService {

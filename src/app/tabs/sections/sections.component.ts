@@ -1,16 +1,16 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
-import { NavController, ModalController } from "ionic-angular";
+import { NavController, ModalController } from 'ionic-angular';
 
-import { TranslateService } from "@ngx-translate/core";
+import { TranslateService } from '@ngx-translate/core';
 
-import { ActionsService, TodoDataService, Section, UtilsService } from "../../core/core.module";
-import { TasksComponent } from "./tasks/tasks.module";
-import { SectionEditComponent } from "./section-edit/section-edit.component";
+import { ActionsService, TodoDataService, Section, UtilsService } from '../../core/core.module';
+import { TasksComponent } from './tasks/tasks.module';
+import { SectionEditComponent } from './section-edit/section-edit.component';
 
 @Component({
-  selector: "sections",
-  templateUrl: "sections.component.html"
+  selector: 'sections',
+  templateUrl: 'sections.component.html',
 })
 export class SectionsComponent implements OnInit {
   sections: Section[];
@@ -43,16 +43,16 @@ export class SectionsComponent implements OnInit {
   }
 
   addSection(): void {
-    let newSection = new Section(this.utils.createUUID(), this.utils.getDate(), "", "");
+    let newSection = new Section(this.utils.createUUID(), this.utils.getDate(), '', '');
 
-    let sectionEditModal = this.modalCtrl.create(SectionEditComponent, {section: newSection});
+    let sectionEditModal = this.modalCtrl.create(SectionEditComponent, { section: newSection });
     sectionEditModal.onDidDismiss((editSection) => {
       if (editSection) {
         this.todoDataService.insertUpdateSection(editSection)
           .then(() => {
             this.sections.splice(0, 0, editSection);
 
-            this.translate.get("SECTIONS.ACTION_CRE_SEC", {value: editSection.description})
+            this.translate.get('SECTIONS.ACTION_CRE_SEC', { value: editSection.description })
               .subscribe((res: string) => {
                 this.actions.addAction(res);
               });
@@ -70,7 +70,7 @@ export class SectionsComponent implements OnInit {
           return section.id != sec.id;
         });
 
-        this.translate.get("SECTIONS.ACTION_DEL_SEC", {value: section.description})
+        this.translate.get('SECTIONS.ACTION_DEL_SEC', { value: section.description })
           .subscribe((res: string) => {
             this.actions.addAction(res);
           });
@@ -80,7 +80,7 @@ export class SectionsComponent implements OnInit {
   modify(section: Section): void {
     const newSection = Object.assign({}, section);
 
-    let taskEditModal = this.modalCtrl.create(SectionEditComponent, {section: newSection});
+    let taskEditModal = this.modalCtrl.create(SectionEditComponent, { section: newSection });
     taskEditModal.onDidDismiss((editSection) => {
       if (editSection) {
         this.todoDataService.insertUpdateSection(editSection)
@@ -88,7 +88,7 @@ export class SectionsComponent implements OnInit {
             section = editSection;
             this.ionViewWillEnter();
 
-            this.translate.get("SECTIONS.ACTION_MOD_SEC", {value: section.description})
+            this.translate.get('SECTIONS.ACTION_MOD_SEC', { value: section.description })
               .subscribe((res: string) => {
                 this.actions.addAction(res);
               });
@@ -101,7 +101,7 @@ export class SectionsComponent implements OnInit {
 
   goToSection(section: Section): void {
     this.navCtrl.push(TasksComponent, {
-      section: section
+      section: section,
     });
   }
 }

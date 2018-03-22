@@ -1,13 +1,13 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
-import { Platform } from "ionic-angular";
-import { StatusBar } from "@ionic-native/status-bar";
-import { SplashScreen } from "@ionic-native/splash-screen";
+import { Platform } from 'ionic-angular';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { TabsComponent } from "./tabs/tabs.module";
+import { TabsComponent } from './tabs/tabs.module';
 
 @Component({
-  templateUrl: "app.component.html"
+  templateUrl: 'app.component.html',
 })
 export class AppComponent {
   rootPage: any;

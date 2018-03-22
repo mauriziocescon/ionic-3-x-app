@@ -1,16 +1,16 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
-import { NavController, ModalController, NavParams } from "ionic-angular";
+import { NavController, ModalController, NavParams } from 'ionic-angular';
 
-import { TranslateService } from "@ngx-translate/core";
+import { TranslateService } from '@ngx-translate/core';
 
-import { TodoDataService, Section, Task, UtilsService } from "../../../core/core.module";
-import { TaskEditComponent } from "./task-edit/task-edit.component";
-import { ActionsService } from "../../../core/actions.service";
+import { TodoDataService, Section, Task, UtilsService } from '../../../core/core.module';
+import { TaskEditComponent } from './task-edit/task-edit.component';
+import { ActionsService } from '../../../core/actions.service';
 
 @Component({
-  selector: "tasks",
-  templateUrl: "tasks.component.html"
+  selector: 'tasks',
+  templateUrl: 'tasks.component.html',
 })
 export class TasksComponent implements OnInit {
   protected section: Section;
@@ -23,7 +23,7 @@ export class TasksComponent implements OnInit {
               protected utils: UtilsService,
               protected actions: ActionsService,
               protected translate: TranslateService) {
-    this.section = this.navParams.get("section");
+    this.section = this.navParams.get('section');
   }
 
   ngOnInit(): void {
@@ -38,16 +38,16 @@ export class TasksComponent implements OnInit {
   }
 
   addTask(): void {
-    let newTask = new Task(this.utils.createUUID(), this.utils.getDate(), "", false);
+    let newTask = new Task(this.utils.createUUID(), this.utils.getDate(), '', false);
 
-    let taskEditModal = this.modalCtrl.create(TaskEditComponent, {task: newTask});
+    let taskEditModal = this.modalCtrl.create(TaskEditComponent, { task: newTask });
     taskEditModal.onDidDismiss((editTask) => {
       if (editTask) {
         this.todoDataService.insertUpdateTaskForSection(editTask, this.section)
           .then(() => {
             this.tasks.splice(0, 0, editTask);
 
-            this.translate.get("TASKS.ACTION_CRE_TASK", {value: editTask.description})
+            this.translate.get('TASKS.ACTION_CRE_TASK', { value: editTask.description })
               .subscribe((res: string) => {
                 this.actions.addAction(res);
               });
@@ -65,7 +65,7 @@ export class TasksComponent implements OnInit {
           return task.id != t.id;
         });
 
-        this.translate.get("TASKS.ACTION_DEL_TASK", {value: task.description})
+        this.translate.get('TASKS.ACTION_DEL_TASK', { value: task.description })
           .subscribe((res: string) => {
             this.actions.addAction(res);
           });
@@ -75,7 +75,7 @@ export class TasksComponent implements OnInit {
   modify(task: Task): void {
     const newTask = Object.assign({}, task);
 
-    let taskEditModal = this.modalCtrl.create(TaskEditComponent, {task: newTask});
+    let taskEditModal = this.modalCtrl.create(TaskEditComponent, { task: newTask });
     taskEditModal.onDidDismiss((editTask) => {
       if (editTask) {
         this.todoDataService.insertUpdateTaskForSection(editTask, this.section)
@@ -83,7 +83,7 @@ export class TasksComponent implements OnInit {
             task = editTask;
 
             this.ionViewWillEnter();
-            this.translate.get("TASKS.ACTION_MOD_TASK", {value: task.description})
+            this.translate.get('TASKS.ACTION_MOD_TASK', { value: task.description })
               .subscribe((res: string) => {
                 this.actions.addAction(res);
               });

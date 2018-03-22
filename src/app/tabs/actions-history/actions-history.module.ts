@@ -1,20 +1,20 @@
-import { NgModule } from "@angular/core";
+import { NgModule } from '@angular/core';
 
-import { IonicModule } from "ionic-angular";
+import { IonicModule } from 'ionic-angular';
 
-import { SharedModule } from "../../shared/shared.module";
+import { SharedModule } from '../../shared/shared.module';
 
-import { ActionsHistoryComponent } from "./actions-history.component";
+import { ActionsHistoryComponent } from './actions-history.component';
 
 @NgModule({
   imports: [
     SharedModule,
-    IonicModule.forRoot(ActionsHistoryComponent)
+    IonicModule.forRoot(ActionsHistoryComponent),
   ],
   declarations: [
-    ActionsHistoryComponent
+    ActionsHistoryComponent,
   ],
-  providers: []
+  providers: [],
 })
 export class ActionsHistoryModule {
 }

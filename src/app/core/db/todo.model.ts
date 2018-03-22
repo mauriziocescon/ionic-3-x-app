@@ -1,5 +1,5 @@
-import { ITask } from "./tasks.model";
-import { ISection } from "./sections.model";
+import { ITask } from './tasks.model';
+import { ISection } from './sections.model';
 
 /**
  * Task object

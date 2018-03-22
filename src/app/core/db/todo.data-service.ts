@@ -1,13 +1,13 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 
-import { Storage } from "@ionic/storage";
-import "rxjs/Rx";
+import { Storage } from '@ionic/storage';
+import 'rxjs/Rx';
 
-import { AppConstantsService } from "../services/app-constants.service";
+import { AppConstantsService } from '../services/app-constants.service';
 
-import { Task } from "./tasks.model";
-import { Section } from "./sections.model";
-import { SectionDb, TaskDb } from "./todo.model";
+import { Task } from './tasks.model';
+import { Section } from './sections.model';
+import { SectionDb, TaskDb } from './todo.model';
 
 /**
  * Data is stored using
@@ -42,18 +42,18 @@ export class TodoDataService {
                 });
               }
               else {
-                console.log("Db contains data");
+                console.log('Db contains data');
                 console.log(JSON.stringify(data));
                 resolve();
               }
-            })
+            });
         })
         .catch(() => {
           // initialize
           this.storage.set(this.appConstants.Application.TODO_DB_KEY, []).then(() => {
             resolve();
           });
-        })
+        });
     });
   }
 
@@ -132,7 +132,7 @@ export class TodoDataService {
 
 
               if (sIndex != -1) {
-                secsDb.splice(sIndex, 1, secDb)
+                secsDb.splice(sIndex, 1, secDb);
               }
               else {
                 secsDb = secsDb.concat(secDb);
@@ -143,7 +143,7 @@ export class TodoDataService {
                   resolve();
                 });
             });
-        })
+        });
     });
   }
 
@@ -177,7 +177,7 @@ export class TodoDataService {
                   });
               }
             });
-        })
+        });
     });
   }
 
@@ -204,7 +204,7 @@ export class TodoDataService {
               }
               resolve([]);
             });
-        })
+        });
     });
   }
 
@@ -243,7 +243,7 @@ export class TodoDataService {
 
 
               if (sIndex != -1) {
-                secsDb.splice(sIndex, 1, secDb)
+                secsDb.splice(sIndex, 1, secDb);
               }
               else {
                 secsDb = secsDb.concat(secDb);
@@ -254,7 +254,7 @@ export class TodoDataService {
                   resolve();
                 });
             });
-        })
+        });
     });
   }
 
@@ -298,7 +298,7 @@ export class TodoDataService {
                     });
                 }
               }
-            })
+            });
         });
     });
   }
@@ -332,7 +332,7 @@ export class TodoDataService {
                 resolve(tasks);
               }
             });
-        })
+        });
     });
   }
 }

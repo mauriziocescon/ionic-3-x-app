@@ -1,14 +1,14 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
-import { NavController } from "ionic-angular";
+import { NavController } from 'ionic-angular';
 
-import { TranslateService } from "@ngx-translate/core";
+import { TranslateService } from '@ngx-translate/core';
 
-import { AppLanguageService } from "../../core/core.module";
+import { AppLanguageService } from '../../core/core.module';
 
 @Component({
-  selector: "settings",
-  templateUrl: "settings.component.html"
+  selector: 'settings',
+  templateUrl: 'settings.component.html',
 })
 export class SettingsComponent implements OnInit {
   languages: string[];

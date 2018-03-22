@@ -12,15 +12,15 @@
 </ion-header>
 
 <ion-content>
-
   <ion-item>
-    <ion-input type="email" [(ngModel)]="username" placeholder="{{ 'LOGIN.USER_LABEL' | translate }}" required></ion-input>
+    <ion-input type="email" [(ngModel)]="username"
+               placeholder="{{ 'LOGIN.USER_LABEL' | translate }}"
+               required></ion-input>
   </ion-item>
-
   <ion-item>
-    <ion-input type="password" [(ngModel)]="password" placeholder="{{ 'LOGIN.PASSWORD_LABEL' | translate }}" required></ion-input>
+    <ion-input type="password" [(ngModel)]="password"
+               placeholder="{{ 'LOGIN.PASSWORD_LABEL' | translate }}"
+               required></ion-input>
   </ion-item>
-
   <button ion-button bottom block (click)="login()">{{ "LOGIN.LOGIN" | translate }}</button>
-
 </ion-content>

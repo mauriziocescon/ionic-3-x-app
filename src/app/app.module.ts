@@ -1,24 +1,24 @@
-import { NgModule, ErrorHandler } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
-import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { NgModule, ErrorHandler } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
-import { IonicApp, IonicModule, IonicErrorHandler } from "ionic-angular";
-import { Storage } from "@ionic/storage";
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
-import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
-import { TranslateHttpLoader } from "@ngx-translate/http-loader";
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { StatusBar } from "@ionic-native/status-bar";
-import { SplashScreen } from "@ionic-native/splash-screen";
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { CoreModule } from "./core/core.module";
-import { SharedModule } from "./shared/shared.module";
-import { TabsModule } from "./tabs/tabs.module";
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
+import { TabsModule } from './tabs/tabs.module';
 
-import { AppComponent } from "./app.component";
+import { AppComponent } from './app.component';
 
 export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, "assets/i18n/", ".json");
+  return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
 }
 
 export function provideStorage() {
@@ -27,7 +27,7 @@ export function provideStorage() {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     IonicModule.forRoot(AppComponent),
@@ -42,15 +42,15 @@ export function provideStorage() {
     }),
     CoreModule.forRoot(),
     SharedModule,
-    TabsModule
+    TabsModule,
   ],
   exports: [
     AppComponent,
-    SharedModule
+    SharedModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    AppComponent
+    AppComponent,
   ],
   providers: [
 
@@ -58,13 +58,13 @@ export function provideStorage() {
     StatusBar,
     {
       provide: ErrorHandler,
-      useClass: IonicErrorHandler
+      useClass: IonicErrorHandler,
     },
     {
       provide: Storage,
-      useFactory: provideStorage
-    }
-  ]
+      useFactory: provideStorage,
+    },
+  ],
 })
 export class AppModule {
 }

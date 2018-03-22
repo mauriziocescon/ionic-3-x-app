@@ -13,11 +13,17 @@
 
 <ion-content>
   <ion-item>
-    <ion-input type="text" placeholder="{{ 'SECTION_EDIT.NAME' | translate }}" [(ngModel)]="section.description" required></ion-input>
+    <ion-input type="text"
+               placeholder="{{ 'SECTION_EDIT.NAME' | translate }}"
+               [(ngModel)]="section.description"
+               required>
+    </ion-input>
   </ion-item>
   <ion-item>
     <ion-label>{{ "SECTION_EDIT.TYPE" | translate }}</ion-label>
-    <ion-select [(ngModel)]="section.type" okText="{{ 'SECTION_EDIT.OK' | translate }}" cancelText="{{ 'SECTION_EDIT.CANCEL' | translate }}">
+    <ion-select [(ngModel)]="section.type"
+                okText="{{ 'SECTION_EDIT.OK' | translate }}"
+                cancelText="{{ 'SECTION_EDIT.CANCEL' | translate }}">
       <ion-option *ngFor="let value of types" [value]="value">
         {{ getSectionTypeDesc(value) | translate }}
       </ion-option>

@@ -1,10 +1,10 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
-import { ViewController, AlertController } from "ionic-angular";
+import { ViewController, AlertController } from 'ionic-angular';
 
 @Component({
-  selector: "login",
-  templateUrl: "login.component.html"
+  selector: 'login',
+  templateUrl: 'login.component.html',
 })
 export class LoginComponent implements OnInit {
   protected viewCtrl: ViewController;

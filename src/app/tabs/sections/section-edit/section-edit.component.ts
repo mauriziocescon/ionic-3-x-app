@@ -1,15 +1,15 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
-import { ViewController, NavParams } from "ionic-angular";
+import { ViewController, NavParams } from 'ionic-angular';
 
-import "rxjs/Rx";
-import { TranslateService } from "@ngx-translate/core";
+import 'rxjs/Rx';
+import { TranslateService } from '@ngx-translate/core';
 
-import { AppConstantsService, Section, UtilsService } from "../../../core/core.module";
+import { AppConstantsService, Section, UtilsService } from '../../../core/core.module';
 
 @Component({
-  selector: "section-edit",
-  templateUrl: "section-edit.component.html"
+  selector: 'section-edit',
+  templateUrl: 'section-edit.component.html',
 })
 export class SectionEditComponent implements OnInit {
   types: any[];
@@ -23,7 +23,7 @@ export class SectionEditComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.section = this.navParams.get("section");
+    this.section = this.navParams.get('section');
     this.types = this.appConstants.Application.SECTION_TYPES;
   }
 

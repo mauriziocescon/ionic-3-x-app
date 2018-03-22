@@ -1,11 +1,11 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
-import { NavController } from "ionic-angular";
-import { ActionsService } from "../../core/core.module";
+import { NavController } from 'ionic-angular';
+import { ActionsService } from '../../core/core.module';
 
 @Component({
-  selector: "actions-history",
-  templateUrl: "actions-history.component.html"
+  selector: 'actions-history',
+  templateUrl: 'actions-history.component.html',
 })
 export class ActionsHistoryComponent implements OnInit {
   protected history: string[];

@@ -13,7 +13,11 @@
 
 <ion-content>
   <ion-item>
-    <ion-input type="text" placeholder="{{ 'TASK_EDIT.DESCRIPTION' | translate }}" [(ngModel)]="task.description" required></ion-input>
+    <ion-input type="text"
+               placeholder="{{ 'TASK_EDIT.DESCRIPTION' | translate }}"
+               [(ngModel)]="task.description"
+               required>
+    </ion-input>
   </ion-item>
   <button ion-button bottom block (click)="save()">{{ "TASK_EDIT.SAVE" | translate }}</button>
 </ion-content>
