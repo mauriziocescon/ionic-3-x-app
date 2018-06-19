@@ -16,6 +16,7 @@
     "json-server-watch": "nodemon --ext js --watch ./mock-server ./mock-server/server.js",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
+    "test": "npm run build",
     "lint": "ionic-app-scripts lint",
     "serve-lab": "ionic-app-scripts serve --lab | npm run json-server-watch",
     "serve-ios": "ionic-app-scripts serve --platform ios | npm run json-server-watch",
