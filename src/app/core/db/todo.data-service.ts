@@ -13,7 +13,7 @@ import { SectionDb, TaskDb } from './todo.model';
  * Data is stored using
  * @ionic/storage mechanism.
  *
- * In particular, storage.get("TODO_DB_KEY")
+ * In particular, storage.get('TODO_DB_KEY')
  * returns an Array of {@Link SectionDb}.
  */
 
